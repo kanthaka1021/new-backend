@@ -1,0 +1,10 @@
+com/magpie/jooq/dto/Tables.class
+com/magpie/jooq/dto/Magpie.class
+com/magpie/jooq/dto/tables/pojos/TestDummy.class
+com/magpie/jooq/dto/tables/TestDummy.class
+com/magpie/jooq/dto/Indexes$Indexes0.class
+com/magpie/jooq/dto/Keys$UniqueKeys0.class
+com/magpie/jooq/dto/Keys.class
+com/magpie/jooq/dto/Indexes.class
+com/magpie/jooq/dto/tables/records/TestDummyRecord.class
+com/magpie/jooq/dto/DefaultCatalog.class
