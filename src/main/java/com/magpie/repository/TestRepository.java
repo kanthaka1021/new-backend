@@ -13,7 +13,11 @@ import reactor.core.publisher.Mono;
 
 @Slf4j
 @Repository
-public class TestRepository implements SelectRepository<TestDummyRecord>, InsertRepository<TestDummyRecord, Table<TestDummyRecord>> {
+public class TestRepository
+        implements
+        SelectRepository<TestDummyRecord>,
+        InsertRepository<TestDummyRecord,
+                Table<TestDummyRecord>> {
     @Autowired
     private DSLContext dsl;
 
@@ -34,6 +38,7 @@ public class TestRepository implements SelectRepository<TestDummyRecord>, Insert
         } catch (Exception e) {
             return Mono.error(e);
         }
-
     }
+
+
 }
