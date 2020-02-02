@@ -23,18 +23,8 @@ public interface InsertRepository<T1 extends Record, T2 extends Table<T1>> {
 			e.printStackTrace();
 			return Mono.error(e);
 		}
-	}	
-	
-	default Mono<Long> insertMonoWitUpdateCount(DSLContext dsl, T1 t1, T2 t2) {
-		try {
-			dsl.insertInto(t2).set(t1).execute();
-			return Mono.just(1L);
-		} catch (Exception e) {
-			e.printStackTrace();
-			return Mono.error(e);
-		}
-	}	
-	
+	}
+
 	default Mono<T1> insertMonoOnDuplicated(DSLContext dsl, T1 t1, T1 t2, T2 t3) {
 		try {
 			dsl.insertInto(t3).set(t1).onDuplicateKeyUpdate().set(t2).execute();

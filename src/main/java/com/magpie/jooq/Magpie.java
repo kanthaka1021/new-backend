@@ -4,7 +4,10 @@
 package com.magpie.jooq;
 
 
+import com.magpie.jooq.tables.Country;
+import com.magpie.jooq.tables.Product;
 import com.magpie.jooq.tables.TestDummy;
+import com.magpie.jooq.tables.User;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -30,7 +33,7 @@ import org.jooq.impl.SchemaImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Magpie extends SchemaImpl {
 
-    private static final long serialVersionUID = 117795147;
+    private static final long serialVersionUID = 1194549189;
 
     /**
      * The reference instance of <code>magpie</code>
@@ -41,6 +44,21 @@ public class Magpie extends SchemaImpl {
      * The table <code>magpie.TEST_DUMMY</code>.
      */
     public final TestDummy TEST_DUMMY = com.magpie.jooq.tables.TestDummy.TEST_DUMMY;
+
+    /**
+     * The table <code>magpie.country</code>.
+     */
+    public final Country COUNTRY = com.magpie.jooq.tables.Country.COUNTRY;
+
+    /**
+     * The table <code>magpie.product</code>.
+     */
+    public final Product PRODUCT = com.magpie.jooq.tables.Product.PRODUCT;
+
+    /**
+     * The table <code>magpie.user</code>.
+     */
+    public final User USER = com.magpie.jooq.tables.User.USER;
 
     /**
      * No further instances allowed
@@ -64,6 +82,9 @@ public class Magpie extends SchemaImpl {
 
     private final List<Table<?>> getTables0() {
         return Arrays.<Table<?>>asList(
-            TestDummy.TEST_DUMMY);
+            TestDummy.TEST_DUMMY,
+            Country.COUNTRY,
+            Product.PRODUCT,
+            User.USER);
     }
 }

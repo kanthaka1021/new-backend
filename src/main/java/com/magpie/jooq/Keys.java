@@ -4,11 +4,19 @@
 package com.magpie.jooq;
 
 
+import com.magpie.jooq.tables.Country;
+import com.magpie.jooq.tables.Product;
 import com.magpie.jooq.tables.TestDummy;
+import com.magpie.jooq.tables.User;
+import com.magpie.jooq.tables.records.CountryRecord;
+import com.magpie.jooq.tables.records.ProductRecord;
 import com.magpie.jooq.tables.records.TestDummyRecord;
+import com.magpie.jooq.tables.records.UserRecord;
 
 import javax.annotation.Generated;
 
+import org.jooq.ForeignKey;
+import org.jooq.Identity;
 import org.jooq.UniqueKey;
 import org.jooq.impl.Internal;
 
@@ -31,23 +39,45 @@ public class Keys {
     // IDENTITY definitions
     // -------------------------------------------------------------------------
 
+    public static final Identity<TestDummyRecord, Integer> IDENTITY_TEST_DUMMY = Identities0.IDENTITY_TEST_DUMMY;
+    public static final Identity<CountryRecord, Integer> IDENTITY_COUNTRY = Identities0.IDENTITY_COUNTRY;
+    public static final Identity<ProductRecord, Integer> IDENTITY_PRODUCT = Identities0.IDENTITY_PRODUCT;
+    public static final Identity<UserRecord, Integer> IDENTITY_USER = Identities0.IDENTITY_USER;
 
     // -------------------------------------------------------------------------
     // UNIQUE and PRIMARY KEY definitions
     // -------------------------------------------------------------------------
 
     public static final UniqueKey<TestDummyRecord> KEY_TEST_DUMMY_PRIMARY = UniqueKeys0.KEY_TEST_DUMMY_PRIMARY;
+    public static final UniqueKey<CountryRecord> KEY_COUNTRY_PRIMARY = UniqueKeys0.KEY_COUNTRY_PRIMARY;
+    public static final UniqueKey<ProductRecord> KEY_PRODUCT_PRIMARY = UniqueKeys0.KEY_PRODUCT_PRIMARY;
+    public static final UniqueKey<UserRecord> KEY_USER_PRIMARY = UniqueKeys0.KEY_USER_PRIMARY;
 
     // -------------------------------------------------------------------------
     // FOREIGN KEY definitions
     // -------------------------------------------------------------------------
 
+    public static final ForeignKey<ProductRecord, UserRecord> FK44KNFT22LEM6QRS5A2DD3WTFG = ForeignKeys0.FK44KNFT22LEM6QRS5A2DD3WTFG;
 
     // -------------------------------------------------------------------------
     // [#1459] distribute members to avoid static initialisers > 64kb
     // -------------------------------------------------------------------------
 
+    private static class Identities0 {
+        public static Identity<TestDummyRecord, Integer> IDENTITY_TEST_DUMMY = Internal.createIdentity(TestDummy.TEST_DUMMY, TestDummy.TEST_DUMMY.ID);
+        public static Identity<CountryRecord, Integer> IDENTITY_COUNTRY = Internal.createIdentity(Country.COUNTRY, Country.COUNTRY.ID);
+        public static Identity<ProductRecord, Integer> IDENTITY_PRODUCT = Internal.createIdentity(Product.PRODUCT, Product.PRODUCT.ID);
+        public static Identity<UserRecord, Integer> IDENTITY_USER = Internal.createIdentity(User.USER, User.USER.ID);
+    }
+
     private static class UniqueKeys0 {
         public static final UniqueKey<TestDummyRecord> KEY_TEST_DUMMY_PRIMARY = Internal.createUniqueKey(TestDummy.TEST_DUMMY, "KEY_TEST_DUMMY_PRIMARY", TestDummy.TEST_DUMMY.ID);
+        public static final UniqueKey<CountryRecord> KEY_COUNTRY_PRIMARY = Internal.createUniqueKey(Country.COUNTRY, "KEY_country_PRIMARY", Country.COUNTRY.ID);
+        public static final UniqueKey<ProductRecord> KEY_PRODUCT_PRIMARY = Internal.createUniqueKey(Product.PRODUCT, "KEY_product_PRIMARY", Product.PRODUCT.ID);
+        public static final UniqueKey<UserRecord> KEY_USER_PRIMARY = Internal.createUniqueKey(User.USER, "KEY_user_PRIMARY", User.USER.ID);
+    }
+
+    private static class ForeignKeys0 {
+        public static final ForeignKey<ProductRecord, UserRecord> FK44KNFT22LEM6QRS5A2DD3WTFG = Internal.createForeignKey(com.magpie.jooq.Keys.KEY_USER_PRIMARY, Product.PRODUCT, "FK44knft22lem6qrs5a2dd3wtfg", Product.PRODUCT.SELLER_ID);
     }
 }

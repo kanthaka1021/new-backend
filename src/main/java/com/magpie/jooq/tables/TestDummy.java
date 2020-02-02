@@ -16,6 +16,7 @@ import javax.annotation.Generated;
 
 import org.jooq.Field;
 import org.jooq.ForeignKey;
+import org.jooq.Identity;
 import org.jooq.Index;
 import org.jooq.Name;
 import org.jooq.Record;
@@ -41,7 +42,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class TestDummy extends TableImpl<TestDummyRecord> {
 
-    private static final long serialVersionUID = 1971942084;
+    private static final long serialVersionUID = 364861810;
 
     /**
      * The reference instance of <code>magpie.TEST_DUMMY</code>
@@ -59,7 +60,7 @@ public class TestDummy extends TableImpl<TestDummyRecord> {
     /**
      * The column <code>magpie.TEST_DUMMY.id</code>.
      */
-    public final TableField<TestDummyRecord, Integer> ID = createField(DSL.name("id"), org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
+    public final TableField<TestDummyRecord, Integer> ID = createField(DSL.name("id"), org.jooq.impl.SQLDataType.INTEGER.nullable(false).identity(true), this, "");
 
     /**
      * The column <code>magpie.TEST_DUMMY.name</code>.
@@ -112,6 +113,11 @@ public class TestDummy extends TableImpl<TestDummyRecord> {
     @Override
     public List<Index> getIndexes() {
         return Arrays.<Index>asList(Indexes.TEST_DUMMY_PRIMARY);
+    }
+
+    @Override
+    public Identity<TestDummyRecord, Integer> getIdentity() {
+        return Keys.IDENTITY_TEST_DUMMY;
     }
 
     @Override

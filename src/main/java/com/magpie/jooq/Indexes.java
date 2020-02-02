@@ -4,7 +4,10 @@
 package com.magpie.jooq;
 
 
+import com.magpie.jooq.tables.Country;
+import com.magpie.jooq.tables.Product;
 import com.magpie.jooq.tables.TestDummy;
+import com.magpie.jooq.tables.User;
 
 import javax.annotation.Generated;
 
@@ -31,6 +34,10 @@ public class Indexes {
     // -------------------------------------------------------------------------
 
     public static final Index TEST_DUMMY_PRIMARY = Indexes0.TEST_DUMMY_PRIMARY;
+    public static final Index COUNTRY_PRIMARY = Indexes0.COUNTRY_PRIMARY;
+    public static final Index PRODUCT_FK44KNFT22LEM6QRS5A2DD3WTFG = Indexes0.PRODUCT_FK44KNFT22LEM6QRS5A2DD3WTFG;
+    public static final Index PRODUCT_PRIMARY = Indexes0.PRODUCT_PRIMARY;
+    public static final Index USER_PRIMARY = Indexes0.USER_PRIMARY;
 
     // -------------------------------------------------------------------------
     // [#1459] distribute members to avoid static initialisers > 64kb
@@ -38,5 +45,9 @@ public class Indexes {
 
     private static class Indexes0 {
         public static Index TEST_DUMMY_PRIMARY = Internal.createIndex("PRIMARY", TestDummy.TEST_DUMMY, new OrderField[] { TestDummy.TEST_DUMMY.ID }, true);
+        public static Index COUNTRY_PRIMARY = Internal.createIndex("PRIMARY", Country.COUNTRY, new OrderField[] { Country.COUNTRY.ID }, true);
+        public static Index PRODUCT_FK44KNFT22LEM6QRS5A2DD3WTFG = Internal.createIndex("FK44knft22lem6qrs5a2dd3wtfg", Product.PRODUCT, new OrderField[] { Product.PRODUCT.SELLER_ID }, false);
+        public static Index PRODUCT_PRIMARY = Internal.createIndex("PRIMARY", Product.PRODUCT, new OrderField[] { Product.PRODUCT.ID }, true);
+        public static Index USER_PRIMARY = Internal.createIndex("PRIMARY", User.USER, new OrderField[] { User.USER.ID }, true);
     }
 }

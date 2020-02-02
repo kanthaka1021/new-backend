@@ -4,7 +4,10 @@
 package com.magpie.jooq;
 
 
+import com.magpie.jooq.tables.Country;
+import com.magpie.jooq.tables.Product;
 import com.magpie.jooq.tables.TestDummy;
+import com.magpie.jooq.tables.User;
 
 import javax.annotation.Generated;
 
@@ -26,4 +29,19 @@ public class Tables {
      * The table <code>magpie.TEST_DUMMY</code>.
      */
     public static final TestDummy TEST_DUMMY = TestDummy.TEST_DUMMY;
+
+    /**
+     * The table <code>magpie.country</code>.
+     */
+    public static final Country COUNTRY = Country.COUNTRY;
+
+    /**
+     * The table <code>magpie.product</code>.
+     */
+    public static final Product PRODUCT = Product.PRODUCT;
+
+    /**
+     * The table <code>magpie.user</code>.
+     */
+    public static final User USER = User.USER;
 }
