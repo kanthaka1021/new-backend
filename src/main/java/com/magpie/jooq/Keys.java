@@ -4,30 +4,14 @@
 package com.magpie.jooq;
 
 
-import com.magpie.jooq.tables.Category;
-import com.magpie.jooq.tables.CategoryLevel;
 import com.magpie.jooq.tables.Country;
-import com.magpie.jooq.tables.ImageFile;
-import com.magpie.jooq.tables.Item;
-import com.magpie.jooq.tables.Location;
-import com.magpie.jooq.tables.Message;
 import com.magpie.jooq.tables.Product;
-import com.magpie.jooq.tables.ProfileImageFile;
 import com.magpie.jooq.tables.TestDummy;
 import com.magpie.jooq.tables.User;
-import com.magpie.jooq.tables.Watch;
-import com.magpie.jooq.tables.records.CategoryLevelRecord;
-import com.magpie.jooq.tables.records.CategoryRecord;
 import com.magpie.jooq.tables.records.CountryRecord;
-import com.magpie.jooq.tables.records.ImageFileRecord;
-import com.magpie.jooq.tables.records.ItemRecord;
-import com.magpie.jooq.tables.records.LocationRecord;
-import com.magpie.jooq.tables.records.MessageRecord;
 import com.magpie.jooq.tables.records.ProductRecord;
-import com.magpie.jooq.tables.records.ProfileImageFileRecord;
 import com.magpie.jooq.tables.records.TestDummyRecord;
 import com.magpie.jooq.tables.records.UserRecord;
-import com.magpie.jooq.tables.records.WatchRecord;
 
 import javax.annotation.Generated;
 
@@ -56,46 +40,24 @@ public class Keys {
     // -------------------------------------------------------------------------
 
     public static final Identity<TestDummyRecord, Integer> IDENTITY_TEST_DUMMY = Identities0.IDENTITY_TEST_DUMMY;
-    public static final Identity<CategoryRecord, Integer> IDENTITY_CATEGORY = Identities0.IDENTITY_CATEGORY;
-    public static final Identity<CategoryLevelRecord, Integer> IDENTITY_CATEGORY_LEVEL = Identities0.IDENTITY_CATEGORY_LEVEL;
     public static final Identity<CountryRecord, Integer> IDENTITY_COUNTRY = Identities0.IDENTITY_COUNTRY;
-    public static final Identity<ImageFileRecord, Integer> IDENTITY_IMAGE_FILE = Identities0.IDENTITY_IMAGE_FILE;
-    public static final Identity<ItemRecord, Integer> IDENTITY_ITEM = Identities0.IDENTITY_ITEM;
-    public static final Identity<LocationRecord, Integer> IDENTITY_LOCATION = Identities0.IDENTITY_LOCATION;
-    public static final Identity<MessageRecord, Integer> IDENTITY_MESSAGE = Identities0.IDENTITY_MESSAGE;
     public static final Identity<ProductRecord, Integer> IDENTITY_PRODUCT = Identities0.IDENTITY_PRODUCT;
-    public static final Identity<ProfileImageFileRecord, Integer> IDENTITY_PROFILE_IMAGE_FILE = Identities0.IDENTITY_PROFILE_IMAGE_FILE;
     public static final Identity<UserRecord, Integer> IDENTITY_USER = Identities0.IDENTITY_USER;
-    public static final Identity<WatchRecord, Integer> IDENTITY_WATCH = Identities0.IDENTITY_WATCH;
 
     // -------------------------------------------------------------------------
     // UNIQUE and PRIMARY KEY definitions
     // -------------------------------------------------------------------------
 
     public static final UniqueKey<TestDummyRecord> KEY_TEST_DUMMY_PRIMARY = UniqueKeys0.KEY_TEST_DUMMY_PRIMARY;
-    public static final UniqueKey<CategoryRecord> KEY_CATEGORY_PRIMARY = UniqueKeys0.KEY_CATEGORY_PRIMARY;
-    public static final UniqueKey<CategoryLevelRecord> KEY_CATEGORY_LEVEL_PRIMARY = UniqueKeys0.KEY_CATEGORY_LEVEL_PRIMARY;
     public static final UniqueKey<CountryRecord> KEY_COUNTRY_PRIMARY = UniqueKeys0.KEY_COUNTRY_PRIMARY;
-    public static final UniqueKey<ImageFileRecord> KEY_IMAGE_FILE_PRIMARY = UniqueKeys0.KEY_IMAGE_FILE_PRIMARY;
-    public static final UniqueKey<ItemRecord> KEY_ITEM_PRIMARY = UniqueKeys0.KEY_ITEM_PRIMARY;
-    public static final UniqueKey<LocationRecord> KEY_LOCATION_PRIMARY = UniqueKeys0.KEY_LOCATION_PRIMARY;
-    public static final UniqueKey<MessageRecord> KEY_MESSAGE_PRIMARY = UniqueKeys0.KEY_MESSAGE_PRIMARY;
     public static final UniqueKey<ProductRecord> KEY_PRODUCT_PRIMARY = UniqueKeys0.KEY_PRODUCT_PRIMARY;
-    public static final UniqueKey<ProfileImageFileRecord> KEY_PROFILE_IMAGE_FILE_PRIMARY = UniqueKeys0.KEY_PROFILE_IMAGE_FILE_PRIMARY;
     public static final UniqueKey<UserRecord> KEY_USER_PRIMARY = UniqueKeys0.KEY_USER_PRIMARY;
-    public static final UniqueKey<WatchRecord> KEY_WATCH_PRIMARY = UniqueKeys0.KEY_WATCH_PRIMARY;
 
     // -------------------------------------------------------------------------
     // FOREIGN KEY definitions
     // -------------------------------------------------------------------------
 
-    public static final ForeignKey<ImageFileRecord, ItemRecord> FK52UH28GE8VCTIU500MBWOCKPL = ForeignKeys0.FK52UH28GE8VCTIU500MBWOCKPL;
-    public static final ForeignKey<ItemRecord, CategoryRecord> FK2N9W8D0DP4BSFRA9DCG0046L4 = ForeignKeys0.FK2N9W8D0DP4BSFRA9DCG0046L4;
-    public static final ForeignKey<ItemRecord, UserRecord> FK8GWMXR8C03VTEK0YQ8IW9J2MB = ForeignKeys0.FK8GWMXR8C03VTEK0YQ8IW9J2MB;
-    public static final ForeignKey<MessageRecord, ItemRecord> FKLOUK16031JRN1KHR7JH3LAR39 = ForeignKeys0.FKLOUK16031JRN1KHR7JH3LAR39;
-    public static final ForeignKey<MessageRecord, UserRecord> FKB3Y6ETTI1CFOUGKDR0QIIEMGV = ForeignKeys0.FKB3Y6ETTI1CFOUGKDR0QIIEMGV;
     public static final ForeignKey<ProductRecord, UserRecord> FK44KNFT22LEM6QRS5A2DD3WTFG = ForeignKeys0.FK44KNFT22LEM6QRS5A2DD3WTFG;
-    public static final ForeignKey<UserRecord, LocationRecord> FKNEYHVOJ17HAX43M8DQ3U7GBIC = ForeignKeys0.FKNEYHVOJ17HAX43M8DQ3U7GBIC;
 
     // -------------------------------------------------------------------------
     // [#1459] distribute members to avoid static initialisers > 64kb
@@ -103,41 +65,19 @@ public class Keys {
 
     private static class Identities0 {
         public static Identity<TestDummyRecord, Integer> IDENTITY_TEST_DUMMY = Internal.createIdentity(TestDummy.TEST_DUMMY, TestDummy.TEST_DUMMY.ID);
-        public static Identity<CategoryRecord, Integer> IDENTITY_CATEGORY = Internal.createIdentity(Category.CATEGORY, Category.CATEGORY.ID);
-        public static Identity<CategoryLevelRecord, Integer> IDENTITY_CATEGORY_LEVEL = Internal.createIdentity(CategoryLevel.CATEGORY_LEVEL, CategoryLevel.CATEGORY_LEVEL.ID);
         public static Identity<CountryRecord, Integer> IDENTITY_COUNTRY = Internal.createIdentity(Country.COUNTRY, Country.COUNTRY.ID);
-        public static Identity<ImageFileRecord, Integer> IDENTITY_IMAGE_FILE = Internal.createIdentity(ImageFile.IMAGE_FILE, ImageFile.IMAGE_FILE.ID);
-        public static Identity<ItemRecord, Integer> IDENTITY_ITEM = Internal.createIdentity(Item.ITEM, Item.ITEM.ID);
-        public static Identity<LocationRecord, Integer> IDENTITY_LOCATION = Internal.createIdentity(Location.LOCATION, Location.LOCATION.ID);
-        public static Identity<MessageRecord, Integer> IDENTITY_MESSAGE = Internal.createIdentity(Message.MESSAGE, Message.MESSAGE.ID);
         public static Identity<ProductRecord, Integer> IDENTITY_PRODUCT = Internal.createIdentity(Product.PRODUCT, Product.PRODUCT.ID);
-        public static Identity<ProfileImageFileRecord, Integer> IDENTITY_PROFILE_IMAGE_FILE = Internal.createIdentity(ProfileImageFile.PROFILE_IMAGE_FILE, ProfileImageFile.PROFILE_IMAGE_FILE.ID);
         public static Identity<UserRecord, Integer> IDENTITY_USER = Internal.createIdentity(User.USER, User.USER.ID);
-        public static Identity<WatchRecord, Integer> IDENTITY_WATCH = Internal.createIdentity(Watch.WATCH, Watch.WATCH.ID);
     }
 
     private static class UniqueKeys0 {
         public static final UniqueKey<TestDummyRecord> KEY_TEST_DUMMY_PRIMARY = Internal.createUniqueKey(TestDummy.TEST_DUMMY, "KEY_TEST_DUMMY_PRIMARY", TestDummy.TEST_DUMMY.ID);
-        public static final UniqueKey<CategoryRecord> KEY_CATEGORY_PRIMARY = Internal.createUniqueKey(Category.CATEGORY, "KEY_category_PRIMARY", Category.CATEGORY.ID);
-        public static final UniqueKey<CategoryLevelRecord> KEY_CATEGORY_LEVEL_PRIMARY = Internal.createUniqueKey(CategoryLevel.CATEGORY_LEVEL, "KEY_category_level_PRIMARY", CategoryLevel.CATEGORY_LEVEL.ID);
         public static final UniqueKey<CountryRecord> KEY_COUNTRY_PRIMARY = Internal.createUniqueKey(Country.COUNTRY, "KEY_country_PRIMARY", Country.COUNTRY.ID);
-        public static final UniqueKey<ImageFileRecord> KEY_IMAGE_FILE_PRIMARY = Internal.createUniqueKey(ImageFile.IMAGE_FILE, "KEY_image_file_PRIMARY", ImageFile.IMAGE_FILE.ID);
-        public static final UniqueKey<ItemRecord> KEY_ITEM_PRIMARY = Internal.createUniqueKey(Item.ITEM, "KEY_item_PRIMARY", Item.ITEM.ID);
-        public static final UniqueKey<LocationRecord> KEY_LOCATION_PRIMARY = Internal.createUniqueKey(Location.LOCATION, "KEY_location_PRIMARY", Location.LOCATION.ID);
-        public static final UniqueKey<MessageRecord> KEY_MESSAGE_PRIMARY = Internal.createUniqueKey(Message.MESSAGE, "KEY_message_PRIMARY", Message.MESSAGE.ID);
         public static final UniqueKey<ProductRecord> KEY_PRODUCT_PRIMARY = Internal.createUniqueKey(Product.PRODUCT, "KEY_product_PRIMARY", Product.PRODUCT.ID);
-        public static final UniqueKey<ProfileImageFileRecord> KEY_PROFILE_IMAGE_FILE_PRIMARY = Internal.createUniqueKey(ProfileImageFile.PROFILE_IMAGE_FILE, "KEY_profile_image_file_PRIMARY", ProfileImageFile.PROFILE_IMAGE_FILE.ID);
         public static final UniqueKey<UserRecord> KEY_USER_PRIMARY = Internal.createUniqueKey(User.USER, "KEY_user_PRIMARY", User.USER.ID);
-        public static final UniqueKey<WatchRecord> KEY_WATCH_PRIMARY = Internal.createUniqueKey(Watch.WATCH, "KEY_watch_PRIMARY", Watch.WATCH.ID);
     }
 
     private static class ForeignKeys0 {
-        public static final ForeignKey<ImageFileRecord, ItemRecord> FK52UH28GE8VCTIU500MBWOCKPL = Internal.createForeignKey(com.magpie.jooq.Keys.KEY_ITEM_PRIMARY, ImageFile.IMAGE_FILE, "FK52uh28ge8vctiu500mbwockpl", ImageFile.IMAGE_FILE.ITEM_ID);
-        public static final ForeignKey<ItemRecord, CategoryRecord> FK2N9W8D0DP4BSFRA9DCG0046L4 = Internal.createForeignKey(com.magpie.jooq.Keys.KEY_CATEGORY_PRIMARY, Item.ITEM, "FK2n9w8d0dp4bsfra9dcg0046l4", Item.ITEM.CATEGORY_ID);
-        public static final ForeignKey<ItemRecord, UserRecord> FK8GWMXR8C03VTEK0YQ8IW9J2MB = Internal.createForeignKey(com.magpie.jooq.Keys.KEY_USER_PRIMARY, Item.ITEM, "FK8gwmxr8c03vtek0yq8iw9j2mb", Item.ITEM.SELLER_ID);
-        public static final ForeignKey<MessageRecord, ItemRecord> FKLOUK16031JRN1KHR7JH3LAR39 = Internal.createForeignKey(com.magpie.jooq.Keys.KEY_ITEM_PRIMARY, Message.MESSAGE, "FKlouk16031jrn1khr7jh3lar39", Message.MESSAGE.ITEM_ID);
-        public static final ForeignKey<MessageRecord, UserRecord> FKB3Y6ETTI1CFOUGKDR0QIIEMGV = Internal.createForeignKey(com.magpie.jooq.Keys.KEY_USER_PRIMARY, Message.MESSAGE, "FKb3y6etti1cfougkdr0qiiemgv", Message.MESSAGE.USER_ID);
         public static final ForeignKey<ProductRecord, UserRecord> FK44KNFT22LEM6QRS5A2DD3WTFG = Internal.createForeignKey(com.magpie.jooq.Keys.KEY_USER_PRIMARY, Product.PRODUCT, "FK44knft22lem6qrs5a2dd3wtfg", Product.PRODUCT.SELLER_ID);
-        public static final ForeignKey<UserRecord, LocationRecord> FKNEYHVOJ17HAX43M8DQ3U7GBIC = Internal.createForeignKey(com.magpie.jooq.Keys.KEY_LOCATION_PRIMARY, User.USER, "FKneyhvoj17hax43m8dq3u7gbic", User.USER.LOCATION_ID);
     }
 }

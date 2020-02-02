@@ -20,7 +20,7 @@ import org.jooq.Identity;
 import org.jooq.Index;
 import org.jooq.Name;
 import org.jooq.Record;
-import org.jooq.Row10;
+import org.jooq.Row6;
 import org.jooq.Schema;
 import org.jooq.Table;
 import org.jooq.TableField;
@@ -42,7 +42,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class User extends TableImpl<UserRecord> {
 
-    private static final long serialVersionUID = -1697636394;
+    private static final long serialVersionUID = -2092728911;
 
     /**
      * The reference instance of <code>magpie.user</code>
@@ -80,32 +80,12 @@ public class User extends TableImpl<UserRecord> {
     /**
      * The column <code>magpie.user.pasword</code>.
      */
-    public final TableField<UserRecord, Integer> PASWORD = createField(DSL.name("pasword"), org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
+    public final TableField<UserRecord, String> PASWORD = createField(DSL.name("pasword"), org.jooq.impl.SQLDataType.VARCHAR(100).nullable(false), this, "");
 
     /**
-     * The column <code>magpie.user.email</code>.
+     * The column <code>magpie.user.profile</code>.
      */
-    public final TableField<UserRecord, String> EMAIL = createField(DSL.name("email"), org.jooq.impl.SQLDataType.VARCHAR(200).nullable(false), this, "");
-
-    /**
-     * The column <code>magpie.user.language</code>.
-     */
-    public final TableField<UserRecord, String> LANGUAGE = createField(DSL.name("language"), org.jooq.impl.SQLDataType.VARCHAR(2).nullable(false), this, "");
-
-    /**
-     * The column <code>magpie.user.password</code>.
-     */
-    public final TableField<UserRecord, Integer> PASSWORD = createField(DSL.name("password"), org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
-
-    /**
-     * The column <code>magpie.user.profile_id</code>.
-     */
-    public final TableField<UserRecord, Integer> PROFILE_ID = createField(DSL.name("profile_id"), org.jooq.impl.SQLDataType.INTEGER, this, "");
-
-    /**
-     * The column <code>magpie.user.location_id</code>.
-     */
-    public final TableField<UserRecord, Integer> LOCATION_ID = createField(DSL.name("location_id"), org.jooq.impl.SQLDataType.INTEGER, this, "");
+    public final TableField<UserRecord, String> PROFILE = createField(DSL.name("profile"), org.jooq.impl.SQLDataType.VARCHAR(500).nullable(false), this, "");
 
     /**
      * Create a <code>magpie.user</code> table reference
@@ -147,7 +127,7 @@ public class User extends TableImpl<UserRecord> {
 
     @Override
     public List<Index> getIndexes() {
-        return Arrays.<Index>asList(Indexes.USER_FKNEYHVOJ17HAX43M8DQ3U7GBIC, Indexes.USER_PRIMARY);
+        return Arrays.<Index>asList(Indexes.USER_PRIMARY);
     }
 
     @Override
@@ -163,15 +143,6 @@ public class User extends TableImpl<UserRecord> {
     @Override
     public List<UniqueKey<UserRecord>> getKeys() {
         return Arrays.<UniqueKey<UserRecord>>asList(Keys.KEY_USER_PRIMARY);
-    }
-
-    @Override
-    public List<ForeignKey<UserRecord, ?>> getReferences() {
-        return Arrays.<ForeignKey<UserRecord, ?>>asList(Keys.FKNEYHVOJ17HAX43M8DQ3U7GBIC);
-    }
-
-    public Location location() {
-        return new Location(this, Keys.FKNEYHVOJ17HAX43M8DQ3U7GBIC);
     }
 
     @Override
@@ -201,11 +172,11 @@ public class User extends TableImpl<UserRecord> {
     }
 
     // -------------------------------------------------------------------------
-    // Row10 type methods
+    // Row6 type methods
     // -------------------------------------------------------------------------
 
     @Override
-    public Row10<Integer, String, String, String, Integer, String, String, Integer, Integer, Integer> fieldsRow() {
-        return (Row10) super.fieldsRow();
+    public Row6<Integer, String, String, String, String, String> fieldsRow() {
+        return (Row6) super.fieldsRow();
     }
 }

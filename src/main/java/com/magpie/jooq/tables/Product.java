@@ -20,7 +20,7 @@ import org.jooq.Identity;
 import org.jooq.Index;
 import org.jooq.Name;
 import org.jooq.Record;
-import org.jooq.Row8;
+import org.jooq.Row6;
 import org.jooq.Schema;
 import org.jooq.Table;
 import org.jooq.TableField;
@@ -42,7 +42,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Product extends TableImpl<ProductRecord> {
 
-    private static final long serialVersionUID = -1576452154;
+    private static final long serialVersionUID = -861770902;
 
     /**
      * The reference instance of <code>magpie.product</code>
@@ -78,24 +78,14 @@ public class Product extends TableImpl<ProductRecord> {
     public final TableField<ProductRecord, Integer> SELLER_ID = createField(DSL.name("seller_id"), org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
+     * The column <code>magpie.product.pandp</code>.
+     */
+    public final TableField<ProductRecord, Integer> PANDP = createField(DSL.name("pandp"), org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
+
+    /**
      * The column <code>magpie.product.price</code>.
      */
     public final TableField<ProductRecord, Integer> PRICE = createField(DSL.name("price"), org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
-
-    /**
-     * The column <code>magpie.product.pandp</code>.
-     */
-    public final TableField<ProductRecord, Integer> PANDP = createField(DSL.name("pandp"), org.jooq.impl.SQLDataType.INTEGER, this, "");
-
-    /**
-     * The column <code>magpie.product.productcol</code>.
-     */
-    public final TableField<ProductRecord, String> PRODUCTCOL = createField(DSL.name("productcol"), org.jooq.impl.SQLDataType.VARCHAR(45), this, "");
-
-    /**
-     * The column <code>magpie.product.condition</code>.
-     */
-    public final TableField<ProductRecord, String> CONDITION = createField(DSL.name("condition"), org.jooq.impl.SQLDataType.VARCHAR(45).nullable(false), this, "");
 
     /**
      * Create a <code>magpie.product</code> table reference
@@ -191,11 +181,11 @@ public class Product extends TableImpl<ProductRecord> {
     }
 
     // -------------------------------------------------------------------------
-    // Row8 type methods
+    // Row6 type methods
     // -------------------------------------------------------------------------
 
     @Override
-    public Row8<Integer, String, String, Integer, Integer, Integer, String, String> fieldsRow() {
-        return (Row8) super.fieldsRow();
+    public Row6<Integer, String, String, Integer, Integer, Integer> fieldsRow() {
+        return (Row6) super.fieldsRow();
     }
 }
