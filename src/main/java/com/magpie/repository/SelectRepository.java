@@ -1,14 +1,14 @@
 package com.magpie.repository;
 
-import org.jooq.DSLContext;
-import org.jooq.Record;
-import org.jooq.SelectConditionStep;
-import org.jooq.UpdateConditionStep;
+import org.jooq.*;
 import org.jooq.exception.DataAccessException;
 import reactor.core.publisher.Mono;
 
+import java.util.List;
+import java.util.function.Supplier;
+
 public interface SelectRepository<T extends Record> {
-    default String getQuery(UpdateConditionStep<T> condition) {
+    default String getQuery(SelectConditionStep<T> condition) {
         return condition.getSQL();
     }
 
@@ -28,4 +28,5 @@ public interface SelectRepository<T extends Record> {
             return Mono.error(e);
         }
     }
+
 }

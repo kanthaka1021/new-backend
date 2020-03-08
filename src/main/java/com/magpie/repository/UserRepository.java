@@ -1,3 +1,4 @@
+
 package com.magpie.repository;
 
 import com.magpie.jooq.tables.pojos.User;

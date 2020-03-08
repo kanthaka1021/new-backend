@@ -2,10 +2,9 @@ package com.magpie.contoller;
 
 
 import com.magpie.domain.CombinedInfo;
+import com.magpie.domain.DetailItem;
 import com.magpie.jooq.tables.pojos.TestDummy;
-import com.magpie.jooq.tables.pojos.User;
 import com.magpie.service.TestService;
-import com.magpie.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.apache.commons.lang3.exception.ExceptionUtils;
@@ -16,6 +15,8 @@ import org.springframework.web.bind.annotation.*;
 import lombok.extern.slf4j.Slf4j;
 import reactor.core.publisher.Mono;
 
+import java.util.List;
+
 @RequestMapping("test")
 @RestController
 @Api(tags = {
@@ -24,17 +25,7 @@ import reactor.core.publisher.Mono;
 @Slf4j
 public class TestController extends MotherController {
     @Autowired private TestService serivce;
-    @Autowired private UserService userserivce;
-
-    @ApiOperation(value = "Find a dummy record.", notes = "", response = TestDummy.class)
-    @GetMapping("/user/{id}")
-    public Mono<ResponseEntity<User>> findUserOne(@PathVariable("id") Integer id) {
-        return this.userserivce.findOne(id)
-                .map(r -> new ResponseEntity<>(r, HttpStatus.OK))
-                .doOnError(e -> log.error(ExceptionUtils.getStackTrace(e)))
-                .onErrorReturn(new ResponseEntity<>(HttpStatus.SERVICE_UNAVAILABLE))
-                .defaultIfEmpty(new ResponseEntity<>(HttpStatus.NO_CONTENT));
-    }
+    //@Autowired private UserService userserivce;
 
     @ApiOperation(value = "Find a dummy record.", notes = "", response = TestDummy.class)
     @GetMapping("/dummy/{id}")
@@ -45,6 +36,20 @@ public class TestController extends MotherController {
                 .onErrorReturn(new ResponseEntity<>(HttpStatus.SERVICE_UNAVAILABLE))
                 .defaultIfEmpty(new ResponseEntity<>(HttpStatus.NO_CONTENT));
     }
+
+    @ApiOperation(value = "Find dummy records.", notes = "", response = TestDummy.class)
+    @GetMapping("/dummy")
+    public Mono<ResponseEntity<List<TestDummy>>> findAll(@RequestParam("seek") Integer seek,
+                                                         @RequestParam("limit") Integer limit,
+                                                         @RequestParam("name") String name
+    ) {
+        return this.serivce.findList(seek, limit, name)
+                .map(r -> new ResponseEntity<>(r, HttpStatus.OK))
+                .doOnError(e -> log.error(ExceptionUtils.getStackTrace(e)))
+                .onErrorReturn(new ResponseEntity<>(HttpStatus.SERVICE_UNAVAILABLE))
+                .defaultIfEmpty(new ResponseEntity<>(HttpStatus.NO_CONTENT));
+    }
+
 
     @ApiOperation(value = "Insert a dummy record.", notes = "", response = TestDummy.class)
     @PostMapping("/save")
