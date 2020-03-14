@@ -1,20 +1,18 @@
 package com.magpie.service;
 
 import com.magpie.domain.CombinedInfo;
+import com.magpie.domain.DetailItem;
 import com.magpie.domain.WeatherInfo;
-import com.magpie.jooq.tables.pojos.Country;
 import com.magpie.jooq.tables.pojos.TestDummy;
-import com.magpie.jooq.tables.pojos.User;
-import com.magpie.repository.TestNoGenericRepository;
 import com.magpie.repository.TestRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
-import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import reactor.util.function.Tuple2;
+
+import java.util.List;
 
 @Slf4j
 @Component
@@ -22,8 +20,8 @@ public class TestService {
     @Autowired
     TestRepository repo;
 
-    @Autowired
-    TestNoGenericRepository noGenericRepo;
+    //@Autowired
+    //TestNoGenericRepository noGenericRepo;
 
     @Value("${external.weather.api}")
     private String weatherAPI;
@@ -31,6 +29,10 @@ public class TestService {
     public Mono<TestDummy> findOne(Integer id) {
         log.info("find one from dummy: "+id);
         return repo.findOne(id);
+    }
+
+    public Mono<List<TestDummy>> findList(Integer seek, Integer limit, String name) {
+        return repo.findList(seek, limit, name);
     }
 
     public Mono<TestDummy> save(TestDummy dummy) {

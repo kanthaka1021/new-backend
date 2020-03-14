@@ -4,8 +4,8 @@
 package com.magpie.jooq;
 
 
-import com.magpie.jooq.tables.Country;
-import com.magpie.jooq.tables.Product;
+import com.magpie.jooq.tables.Category;
+import com.magpie.jooq.tables.Item;
 import com.magpie.jooq.tables.TestDummy;
 import com.magpie.jooq.tables.User;
 
@@ -31,14 +31,14 @@ public class Tables {
     public static final TestDummy TEST_DUMMY = TestDummy.TEST_DUMMY;
 
     /**
-     * The table <code>magpie.country</code>.
+     * The table <code>magpie.category</code>.
      */
-    public static final Country COUNTRY = Country.COUNTRY;
+    public static final Category CATEGORY = Category.CATEGORY;
 
     /**
-     * The table <code>magpie.product</code>.
+     * The table <code>magpie.item</code>.
      */
-    public static final Product PRODUCT = Product.PRODUCT;
+    public static final Item ITEM = Item.ITEM;
 
     /**
      * The table <code>magpie.user</code>.

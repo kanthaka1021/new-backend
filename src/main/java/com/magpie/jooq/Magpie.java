@@ -4,8 +4,8 @@
 package com.magpie.jooq;
 
 
-import com.magpie.jooq.tables.Country;
-import com.magpie.jooq.tables.Product;
+import com.magpie.jooq.tables.Category;
+import com.magpie.jooq.tables.Item;
 import com.magpie.jooq.tables.TestDummy;
 import com.magpie.jooq.tables.User;
 
@@ -33,7 +33,7 @@ import org.jooq.impl.SchemaImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Magpie extends SchemaImpl {
 
-    private static final long serialVersionUID = 1194549189;
+    private static final long serialVersionUID = 1262272883;
 
     /**
      * The reference instance of <code>magpie</code>
@@ -46,14 +46,14 @@ public class Magpie extends SchemaImpl {
     public final TestDummy TEST_DUMMY = com.magpie.jooq.tables.TestDummy.TEST_DUMMY;
 
     /**
-     * The table <code>magpie.country</code>.
+     * The table <code>magpie.category</code>.
      */
-    public final Country COUNTRY = com.magpie.jooq.tables.Country.COUNTRY;
+    public final Category CATEGORY = com.magpie.jooq.tables.Category.CATEGORY;
 
     /**
-     * The table <code>magpie.product</code>.
+     * The table <code>magpie.item</code>.
      */
-    public final Product PRODUCT = com.magpie.jooq.tables.Product.PRODUCT;
+    public final Item ITEM = com.magpie.jooq.tables.Item.ITEM;
 
     /**
      * The table <code>magpie.user</code>.
@@ -83,8 +83,8 @@ public class Magpie extends SchemaImpl {
     private final List<Table<?>> getTables0() {
         return Arrays.<Table<?>>asList(
             TestDummy.TEST_DUMMY,
-            Country.COUNTRY,
-            Product.PRODUCT,
+            Category.CATEGORY,
+            Item.ITEM,
             User.USER);
     }
 }
