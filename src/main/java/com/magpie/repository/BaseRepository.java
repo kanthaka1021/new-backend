@@ -48,14 +48,9 @@ public class BaseRepository<T1 extends Record, T2 extends Table<T1>, T3>{
     }
 
     // Use generic type and supplier
-    public Mono<List<T3>> fetchList(Supplier<List<T3>> func) {
+    public Mono<List<T3>> fetchList(Supplier<List<T3>> fun) {
         try {
-            List<T3> t = func.get();
-            if (t == null) {
-                return Mono.empty();
-            } else {
-                return Mono.just(t);
-            }
+            return Mono.defer(() -> {return Mono.just(fun.get());});
         } catch (Exception e) {
             return Mono.error(e);
         }

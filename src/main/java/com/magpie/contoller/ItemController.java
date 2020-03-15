@@ -16,6 +16,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @RequestMapping("items")
@@ -42,11 +43,11 @@ public class ItemController extends MotherController {
     @GetMapping("/")
     public Mono<ResponseEntity<List<DetailItem>>> findAll(@RequestParam("seek") Integer seek,
                                                           @RequestParam("limit") Integer limit,
-                                                          @RequestParam("from_price") Integer fromPrice,
-                                                          @RequestParam("to_price") Integer toPrice,
-                                                          @RequestParam("currency") String currency
+                                                          @RequestParam("from_price") BigDecimal fromPrice,
+                                                          @RequestParam("to_price") BigDecimal toPrice,
+                                                          @RequestParam("unit") String unit
     ) {
-        return this.serivce.findList(seek, limit, fromPrice, toPrice, currency)
+        return this.serivce.findList(seek, limit, fromPrice, toPrice, unit)
                 .map(r -> new ResponseEntity<>(r, HttpStatus.OK))
                 .doOnError(e -> log.error(ExceptionUtils.getStackTrace(e)))
                 .onErrorReturn(new ResponseEntity<>(HttpStatus.SERVICE_UNAVAILABLE))
