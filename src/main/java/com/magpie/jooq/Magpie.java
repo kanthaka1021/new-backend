@@ -6,7 +6,7 @@ package com.magpie.jooq;
 
 import com.magpie.jooq.tables.Category;
 import com.magpie.jooq.tables.CurrencyInfo;
-import com.magpie.jooq.tables.Item;
+import com.magpie.jooq.tables.Items;
 import com.magpie.jooq.tables.TestDummy;
 import com.magpie.jooq.tables.User;
 
@@ -34,7 +34,7 @@ import org.jooq.impl.SchemaImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Magpie extends SchemaImpl {
 
-    private static final long serialVersionUID = 546492797;
+    private static final long serialVersionUID = -1940714163;
 
     /**
      * The reference instance of <code>magpie</code>
@@ -57,9 +57,9 @@ public class Magpie extends SchemaImpl {
     public final CurrencyInfo CURRENCY_INFO = com.magpie.jooq.tables.CurrencyInfo.CURRENCY_INFO;
 
     /**
-     * The table <code>magpie.item</code>.
+     * The table <code>magpie.items</code>.
      */
-    public final Item ITEM = com.magpie.jooq.tables.Item.ITEM;
+    public final Items ITEMS = com.magpie.jooq.tables.Items.ITEMS;
 
     /**
      * The table <code>magpie.user</code>.
@@ -91,7 +91,7 @@ public class Magpie extends SchemaImpl {
             TestDummy.TEST_DUMMY,
             Category.CATEGORY,
             CurrencyInfo.CURRENCY_INFO,
-            Item.ITEM,
+            Items.ITEMS,
             User.USER);
     }
 }

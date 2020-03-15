@@ -6,12 +6,12 @@ package com.magpie.jooq;
 
 import com.magpie.jooq.tables.Category;
 import com.magpie.jooq.tables.CurrencyInfo;
-import com.magpie.jooq.tables.Item;
+import com.magpie.jooq.tables.Items;
 import com.magpie.jooq.tables.TestDummy;
 import com.magpie.jooq.tables.User;
 import com.magpie.jooq.tables.records.CategoryRecord;
 import com.magpie.jooq.tables.records.CurrencyInfoRecord;
-import com.magpie.jooq.tables.records.ItemRecord;
+import com.magpie.jooq.tables.records.ItemsRecord;
 import com.magpie.jooq.tables.records.TestDummyRecord;
 import com.magpie.jooq.tables.records.UserRecord;
 
@@ -44,7 +44,7 @@ public class Keys {
     public static final Identity<TestDummyRecord, Integer> IDENTITY_TEST_DUMMY = Identities0.IDENTITY_TEST_DUMMY;
     public static final Identity<CategoryRecord, Integer> IDENTITY_CATEGORY = Identities0.IDENTITY_CATEGORY;
     public static final Identity<CurrencyInfoRecord, Integer> IDENTITY_CURRENCY_INFO = Identities0.IDENTITY_CURRENCY_INFO;
-    public static final Identity<ItemRecord, Integer> IDENTITY_ITEM = Identities0.IDENTITY_ITEM;
+    public static final Identity<ItemsRecord, Integer> IDENTITY_ITEMS = Identities0.IDENTITY_ITEMS;
 
     // -------------------------------------------------------------------------
     // UNIQUE and PRIMARY KEY definitions
@@ -53,14 +53,14 @@ public class Keys {
     public static final UniqueKey<TestDummyRecord> KEY_TEST_DUMMY_PRIMARY = UniqueKeys0.KEY_TEST_DUMMY_PRIMARY;
     public static final UniqueKey<CategoryRecord> KEY_CATEGORY_PRIMARY = UniqueKeys0.KEY_CATEGORY_PRIMARY;
     public static final UniqueKey<CurrencyInfoRecord> KEY_CURRENCY_INFO_PRIMARY = UniqueKeys0.KEY_CURRENCY_INFO_PRIMARY;
-    public static final UniqueKey<ItemRecord> KEY_ITEM_PRIMARY = UniqueKeys0.KEY_ITEM_PRIMARY;
+    public static final UniqueKey<ItemsRecord> KEY_ITEMS_PRIMARY = UniqueKeys0.KEY_ITEMS_PRIMARY;
     public static final UniqueKey<UserRecord> KEY_USER_PRIMARY = UniqueKeys0.KEY_USER_PRIMARY;
 
     // -------------------------------------------------------------------------
     // FOREIGN KEY definitions
     // -------------------------------------------------------------------------
 
-    public static final ForeignKey<ItemRecord, CategoryRecord> CATEGORY_ON_ITEM_FK = ForeignKeys0.CATEGORY_ON_ITEM_FK;
+    public static final ForeignKey<ItemsRecord, CategoryRecord> CATEGORY_ON_ITEM_FK = ForeignKeys0.CATEGORY_ON_ITEM_FK;
 
     // -------------------------------------------------------------------------
     // [#1459] distribute members to avoid static initialisers > 64kb
@@ -70,18 +70,18 @@ public class Keys {
         public static Identity<TestDummyRecord, Integer> IDENTITY_TEST_DUMMY = Internal.createIdentity(TestDummy.TEST_DUMMY, TestDummy.TEST_DUMMY.ID);
         public static Identity<CategoryRecord, Integer> IDENTITY_CATEGORY = Internal.createIdentity(Category.CATEGORY, Category.CATEGORY.ID);
         public static Identity<CurrencyInfoRecord, Integer> IDENTITY_CURRENCY_INFO = Internal.createIdentity(CurrencyInfo.CURRENCY_INFO, CurrencyInfo.CURRENCY_INFO.ID);
-        public static Identity<ItemRecord, Integer> IDENTITY_ITEM = Internal.createIdentity(Item.ITEM, Item.ITEM.ID);
+        public static Identity<ItemsRecord, Integer> IDENTITY_ITEMS = Internal.createIdentity(Items.ITEMS, Items.ITEMS.ID);
     }
 
     private static class UniqueKeys0 {
         public static final UniqueKey<TestDummyRecord> KEY_TEST_DUMMY_PRIMARY = Internal.createUniqueKey(TestDummy.TEST_DUMMY, "KEY_TEST_DUMMY_PRIMARY", TestDummy.TEST_DUMMY.ID);
         public static final UniqueKey<CategoryRecord> KEY_CATEGORY_PRIMARY = Internal.createUniqueKey(Category.CATEGORY, "KEY_category_PRIMARY", Category.CATEGORY.ID);
         public static final UniqueKey<CurrencyInfoRecord> KEY_CURRENCY_INFO_PRIMARY = Internal.createUniqueKey(CurrencyInfo.CURRENCY_INFO, "KEY_currency_info_PRIMARY", CurrencyInfo.CURRENCY_INFO.ID);
-        public static final UniqueKey<ItemRecord> KEY_ITEM_PRIMARY = Internal.createUniqueKey(Item.ITEM, "KEY_item_PRIMARY", Item.ITEM.ID);
+        public static final UniqueKey<ItemsRecord> KEY_ITEMS_PRIMARY = Internal.createUniqueKey(Items.ITEMS, "KEY_items_PRIMARY", Items.ITEMS.ID);
         public static final UniqueKey<UserRecord> KEY_USER_PRIMARY = Internal.createUniqueKey(User.USER, "KEY_user_PRIMARY", User.USER.ID);
     }
 
     private static class ForeignKeys0 {
-        public static final ForeignKey<ItemRecord, CategoryRecord> CATEGORY_ON_ITEM_FK = Internal.createForeignKey(com.magpie.jooq.Keys.KEY_CATEGORY_PRIMARY, Item.ITEM, "category_on_item_fk", Item.ITEM.CAT_ID);
+        public static final ForeignKey<ItemsRecord, CategoryRecord> CATEGORY_ON_ITEM_FK = Internal.createForeignKey(com.magpie.jooq.Keys.KEY_CATEGORY_PRIMARY, Items.ITEMS, "category_on_item_fk", Items.ITEMS.CAT_ID);
     }
 }

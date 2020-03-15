@@ -22,7 +22,7 @@ CREATE TABLE `category` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
-CREATE TABLE `item` (
+CREATE TABLE `items` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `desc` text COLLATE utf8_unicode_ci,
@@ -34,16 +34,16 @@ CREATE TABLE `item` (
 
 INSERT INTO `magpie`.`category`(name) VALUES('Electronics');
 INSERT INTO `magpie`.`category`(name) VALUES('Foods');
-INSERT INTO `magpie`.`item`(`name`,`desc`,`price`,`cat_id`) VALUES('Network card','',200, 1);
-INSERT INTO `magpie`.`item`(`name`,`desc`,`price`,`cat_id`) VALUES('Lan cable','',100, 1);
-INSERT INTO `magpie`.`item`(`name`,`desc`,`price`,`cat_id`) VALUES('Laptop computer','',199, 1);
-INSERT INTO `magpie`.`item`(`name`,`desc`,`price`,`cat_id`) VALUES('Lan Docker','',1, 1);
-INSERT INTO `magpie`.`item`(`name`,`desc`,`price`,`cat_id`) VALUES('Rice','','50', 2);
-INSERT INTO `magpie`.`item`(`name`,`desc`,`price`,`cat_id`) VALUES('Bread','',2, 1);
-INSERT INTO `magpie`.`item`(`name`,`desc`,`price`,`cat_id`) VALUES('Toilet paper','',1, 1);
-INSERT INTO `magpie`.`item`(`name`,`desc`,`price`,`cat_id`) VALUES('Apple','',100, 1);
-INSERT INTO `magpie`.`item`(`name`,`desc`,`price`,`cat_id`) VALUES('Snack','',1, 1);
-INSERT INTO `magpie`.`item`(`name`,`desc`,`price`,`cat_id`) VALUES('Beer','',2, 1);
+INSERT INTO `magpie`.`items`(`name`,`desc`,`price`,`cat_id`) VALUES('Network card','',200, 1);
+INSERT INTO `magpie`.`items`(`name`,`desc`,`price`,`cat_id`) VALUES('Lan cable','',100, 1);
+INSERT INTO `magpie`.`items`(`name`,`desc`,`price`,`cat_id`) VALUES('Laptop computer','',199, 1);
+INSERT INTO `magpie`.`items`(`name`,`desc`,`price`,`cat_id`) VALUES('Lan Docker','',1, 1);
+INSERT INTO `magpie`.`items`(`name`,`desc`,`price`,`cat_id`) VALUES('Rice','','50', 2);
+INSERT INTO `magpie`.`items`(`name`,`desc`,`price`,`cat_id`) VALUES('Bread','',2, 1);
+INSERT INTO `magpie`.`items`(`name`,`desc`,`price`,`cat_id`) VALUES('Toilet paper','',1, 1);
+INSERT INTO `magpie`.`items`(`name`,`desc`,`price`,`cat_id`) VALUES('Apple','',100, 1);
+INSERT INTO `magpie`.`items`(`name`,`desc`,`price`,`cat_id`) VALUES('Snack','',1, 1);
+INSERT INTO `magpie`.`items`(`name`,`desc`,`price`,`cat_id`) VALUES('Beer','',2, 1);
 
 
 CREATE TABLE `currency_info` (
