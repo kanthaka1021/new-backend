@@ -44,3 +44,13 @@ INSERT INTO `magpie`.`item`(`name`,`desc`,`price`,`cat_id`) VALUES('Toilet paper
 INSERT INTO `magpie`.`item`(`name`,`desc`,`price`,`cat_id`) VALUES('Apple','',100, 1);
 INSERT INTO `magpie`.`item`(`name`,`desc`,`price`,`cat_id`) VALUES('Snack','',1, 1);
 INSERT INTO `magpie`.`item`(`name`,`desc`,`price`,`cat_id`) VALUES('Beer','',2, 1);
+
+
+CREATE TABLE `currency_info` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `unit` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `price` decimal(10,2) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+SELECT * FROM magpie.item;
+
