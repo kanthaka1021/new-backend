@@ -5,6 +5,7 @@ package com.magpie.jooq;
 
 
 import com.magpie.jooq.tables.Category;
+import com.magpie.jooq.tables.CurrencyInfo;
 import com.magpie.jooq.tables.Item;
 import com.magpie.jooq.tables.TestDummy;
 import com.magpie.jooq.tables.User;
@@ -34,6 +35,11 @@ public class Tables {
      * The table <code>magpie.category</code>.
      */
     public static final Category CATEGORY = Category.CATEGORY;
+
+    /**
+     * The table <code>magpie.currency_info</code>.
+     */
+    public static final CurrencyInfo CURRENCY_INFO = CurrencyInfo.CURRENCY_INFO;
 
     /**
      * The table <code>magpie.item</code>.

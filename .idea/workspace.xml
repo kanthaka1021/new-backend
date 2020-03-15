@@ -5,11 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="757e5696-1871-4936-a227-d1c85956264a" name="Default Changelist" comment="#add: example codes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/magpie/contoller/ItemController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/magpie/domain/DetailItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/magpie/repository/ItemRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/magpie/service/ItemService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/magpie/contoller/CurrencyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/magpie/repository/CurrencyInfoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/magpie/service/CurrencyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/magpie/jooq/Keys$Identities0.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/magpie/jooq/tables/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/magpie/jooq/tables/pojos/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/magpie/jooq/tables/records/UserRecord.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/com/magpie/repository/UpdateRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/magpie/repository/UserRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/magpie/service/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../magpie-backend/.idea/artifacts/magpie_backend_jar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../magpie-backend/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../magpie-backend/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../magpie-backend/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../magpie-backend/.idea/misc.xml" afterDir="false" />
@@ -59,38 +64,28 @@
       <change beforePath="$PROJECT_DIR$/../magpie-discovery/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../magpie-discovery/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../magpie-discovery/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../magpie-discovery/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$" beforeDir="false" afterPath="$PROJECT_DIR$" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/contoller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/contoller/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/contoller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/contoller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/contoller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/contoller/ItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/domain/DetailItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/domain/DetailItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/Indexes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/Indexes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/Keys.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/Keys.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/Magpie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/Magpie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/Tables.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/Tables.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/Country.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/Product.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/pojos/Country.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/pojos/Product.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/pojos/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/pojos/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/records/CountryRecord.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/records/ProductRecord.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/records/UserRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/records/UserRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/repository/AdvancedUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/repository/AdvancedUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/repository/BaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/repository/BaseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/repository/ItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/repository/ItemRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/repository/SelectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/repository/SelectRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/repository/TestNoGenericRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/repository/TestRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/repository/TestRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/service/TestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/service/TestService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/table_script.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/table_script.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/magpie/contoller/TestController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/magpie/jooq/Indexes$Indexes0.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/magpie/jooq/Indexes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/magpie/jooq/Keys$UniqueKeys0.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/magpie/jooq/Keys.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/magpie/jooq/Magpie.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/magpie/jooq/Tables.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/service/ItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/service/ItemService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/magpie/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/magpie/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/magpie/contoller/TestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/magpie/contoller/TestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/magpie/jooq/Indexes$Indexes0.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/magpie/jooq/Indexes$Indexes0.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/magpie/jooq/Indexes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/magpie/jooq/Indexes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/magpie/jooq/Keys$UniqueKeys0.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/magpie/jooq/Keys$UniqueKeys0.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/magpie/jooq/Keys.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/magpie/jooq/Keys.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/magpie/jooq/Magpie.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/magpie/jooq/Magpie.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/magpie/jooq/Tables.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/magpie/jooq/Tables.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/magpie/jooq/tables/TestDummy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/magpie/jooq/tables/TestDummy.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/magpie/repository/InsertRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/magpie/repository/InsertRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/magpie/repository/SelectRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/magpie/repository/SelectRepository.class" afterDir="false" />
@@ -113,10 +108,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/contoller/TestController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/service/ItemService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+            <state relative-caret-position="441">
+              <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -127,26 +122,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/contoller/ItemController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="46" column="43" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/service/ItemService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="29" column="121" selection-start-line="29" selection-start-column="121" selection-end-line="29" selection-end-column="121" />
+            <state relative-caret-position="561">
+              <caret line="49" column="36" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/table_script.sql">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/contoller/CurrencyController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="44" column="83" lean-forward="true" selection-start-line="44" selection-start-column="83" selection-end-line="44" selection-end-column="83" />
+            <state relative-caret-position="472">
+              <caret line="48" column="36" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/repository/CurrencyInfoRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" column="12" lean-forward="true" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -154,7 +152,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/service/TestService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
+            <state relative-caret-position="425">
               <caret line="37" selection-start-line="37" selection-end-line="37" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -175,11 +173,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/repository/ItemRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="40" column="50" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
+            <state relative-caret-position="259">
+              <caret line="43" column="37" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -188,19 +186,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/domain/WeatherInfo.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/service/CurrencyService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/domain/DetailItem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="340">
+              <caret line="20" column="42" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -208,11 +200,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+            <state relative-caret-position="68">
+              <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1700">
+              <caret line="100" column="34" selection-start-line="100" selection-start-column="34" selection-end-line="100" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -254,8 +255,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/magpie/repository/UpdateRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magpie/contoller/TestController2.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magpie/repository/InsertRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/magpie/repository/BaseRepository.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/magpie/repository/TestListRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magpie/domain/TestCombined.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magpie/repository/TestNoGenericRepository.java" />
@@ -264,15 +263,22 @@
         <option value="$PROJECT_DIR$/src/main/java/com/magpie/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magpie/repository/TestRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magpie/repository/AdvancedUserRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/magpie/repository/SelectRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magpie/service/TestService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magpie/contoller/TestController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/magpie/contoller/ItemController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/magpie/Application.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/magpie/domain/DetailItem.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/magpie/repository/ItemRepository.java" />
         <option value="$PROJECT_DIR$/src/main/resources/table_script.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/magpie/contoller/CurrencyApi.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/magpie/repository/SelectRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/magpie/contoller/CurrencyContorller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/magpie/repository/BaseRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/magpie/domain/DetailItem.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/magpie/contoller/ItemController.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/magpie/Application.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magpie/service/ItemService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/magpie/contoller/CurrencyController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/magpie/repository/CurrencyInfoRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/magpie/service/CurrencyService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/magpie/repository/ItemRepository.java" />
       </list>
     </option>
   </component>
@@ -320,6 +326,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -413,24 +421,22 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.magpie.contoller" />
       <recent name="com.magpie.repository" />
       <recent name="com.magpie.service" />
-      <recent name="com.magpie.contoller" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/com/magpie/repository" />
@@ -510,7 +516,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580627253914</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="#add: example codes">
+      <created>1583672506839</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1583672506839</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -523,17 +536,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <frame x="0" y="0" width="1302" height="960" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20512821" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26825398" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Learn" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3255102" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.23258427" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -545,7 +558,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.102564104" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.18192919" />
+      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.023809524" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
     </layout>
   </component>
@@ -602,30 +615,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/contoller/WeatherApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="25" column="23" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/repository/TestListRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/TestJoin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="31" column="3" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
-          <folding>
-            <element signature="e#827#880#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/repository/TestListRepository.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/TestJoin.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -633,40 +624,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/repository/InsertRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/repository/TestNoGenericRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/pojos/TestJoin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/repository/TestNoGenericRepository.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/pojos/TestJoin.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/contoller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="82">
@@ -735,32 +694,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/repository/TestRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/contoller/TestController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+        <state relative-caret-position="799">
+          <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/repository/BaseRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/table_script.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        <state relative-caret-position="748">
+          <caret line="44" column="83" selection-start-line="44" selection-start-column="83" selection-end-line="44" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/domain/WeatherInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/contoller/WeatherApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/repository/InsertRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2662#2663#0" expanded="true" />
-            <element signature="e#2729#2730#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/repository/AdvancedUserRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="23" column="15" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
+        <state relative-caret-position="278">
+          <caret line="23" column="18" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/repository/TestRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -770,27 +758,55 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/repository/SelectRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
-          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+          <caret line="29" column="44" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/service/TestService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/repository/BaseRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
+        <state relative-caret-position="273">
+          <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2622#2623#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/domain/DetailItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="16" column="26" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/contoller/TestController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+        <state relative-caret-position="68">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1700">
+          <caret line="100" column="34" selection-start-line="100" selection-start-column="34" selection-end-line="100" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/repository/CurrencyInfoRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="12" lean-forward="true" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -809,46 +825,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/contoller/ItemController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="46" column="43" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
+        <state relative-caret-position="561">
+          <caret line="49" column="36" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/Application.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/contoller/CurrencyController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        <state relative-caret-position="472">
+          <caret line="48" column="36" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/service/CurrencyService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="42" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/domain/WeatherInfo.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/service/TestService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/domain/DetailItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/table_script.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="44" column="83" lean-forward="true" selection-start-line="44" selection-start-column="83" selection-end-line="44" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/repository/ItemRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="40" column="50" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
+        <state relative-caret-position="425">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -857,8 +859,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/service/ItemService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="29" column="121" selection-start-line="29" selection-start-column="121" selection-end-line="29" selection-end-column="121" />
+        <state relative-caret-position="441">
+          <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magpie/repository/ItemRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="43" column="37" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -901,6 +916,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

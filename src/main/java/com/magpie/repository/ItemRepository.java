@@ -3,19 +3,21 @@ package com.magpie.repository;
 import com.magpie.domain.DetailItem;
 import com.magpie.jooq.tables.pojos.Item;
 import com.magpie.jooq.tables.records.ItemRecord;
+import com.magpie.service.CurrencyService;
 import lombok.extern.slf4j.Slf4j;
 import org.jooq.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import reactor.core.publisher.Mono;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import static com.magpie.jooq.tables.Item.ITEM;
 import static com.magpie.jooq.tables.Category.CATEGORY;
 
-@Slf4j
 @Repository
+@Slf4j
 public class ItemRepository
         implements SelectRepository<ItemRecord>, InsertRepository<ItemRecord, Table<ItemRecord>> {
     @Autowired
@@ -33,9 +35,9 @@ public class ItemRepository
     }
 
     // Find a list joining item and category
-    public Mono<List<DetailItem>> findList(Integer seek, Integer limit, Integer fromPrice, Integer toPrice) {
+    public Mono<List<DetailItem>> findList(Integer seek, Integer limit, BigDecimal fromPrice, BigDecimal toPrice) {
         try {
-            Result<Record5<Integer, String, String, Integer, String>> result
+            Result<Record5<Integer, String, String, BigDecimal, String>> result
                     = dsl.select(ITEM.ID, ITEM.NAME, ITEM.DESC, ITEM.PRICE, CATEGORY.NAME)
                     .from(ITEM).join(CATEGORY)
                     .on(CATEGORY.ID.eq(ITEM.CAT_ID))
@@ -52,7 +54,7 @@ public class ItemRepository
                     .seek(seek)
                     .limit(limit)
                     .getSQL();
-            System.out.println(sql);
+            log.info(sql);
             List<DetailItem> list = result.into(DetailItem.class);
             return Mono.just(list);
         } catch (Exception e) {
