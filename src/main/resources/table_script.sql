@@ -26,9 +26,11 @@ CREATE TABLE `items` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `desc` text COLLATE utf8_unicode_ci,
-  `price` int(11) DEFAULT NULL,
+  `price` decimal(10,2) DEFAULT NULL,
   `cat_id` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `category_on_item_fk_idx` (`cat_id`),
+  CONSTRAINT `category_on_item_fk` FOREIGN KEY (`cat_id`) REFERENCES `category` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
