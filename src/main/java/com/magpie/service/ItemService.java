@@ -1,7 +1,7 @@
 package com.magpie.service;
 
 import com.magpie.domain.DetailItem;
-import com.magpie.jooq.tables.pojos.Item;
+import com.magpie.jooq.tables.pojos.Items;
 import com.magpie.repository.ItemRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +21,7 @@ public class ItemService {
     private String currentCurrency = "USD";
     @Autowired private CurrencyService currencyService;
 
-    public Mono<Item> findOne(Integer id) {
+    public Mono<Items> findOne(Integer id) {
         return repo.findOne(id);
     }
 

@@ -2,10 +2,9 @@ package com.magpie.contoller;
 
 
 import com.magpie.domain.DetailItem;
-import com.magpie.jooq.tables.pojos.Item;
+import com.magpie.jooq.tables.pojos.Items;
 import com.magpie.jooq.tables.pojos.TestDummy;
 import com.magpie.service.ItemService;
-import com.magpie.service.TestService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -31,7 +30,7 @@ public class ItemController extends MotherController {
 
     @ApiOperation(value = "Find a dummy record.", notes = "", response = TestDummy.class)
     @GetMapping("/item/{id}")
-    public Mono<ResponseEntity<Item>> findOne(@PathVariable("id") Integer id) {
+    public Mono<ResponseEntity<Items>> findOne(@PathVariable("id") Integer id) {
         return this.serivce.findOne(id)
                 .map(r -> new ResponseEntity<>(r, HttpStatus.OK))
                 .doOnError(e -> log.error(ExceptionUtils.getStackTrace(e)))
