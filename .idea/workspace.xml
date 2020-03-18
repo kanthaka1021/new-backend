@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="757e5696-1871-4936-a227-d1c85956264a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/magpie/contoller/LocationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/magpie/repository/LocationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/magpie/service/LocationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/contoller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/contoller/ItemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/contoller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/contoller/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/domain/DetailItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/domain/DetailItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/repository/ItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/repository/ItemRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/service/ItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/service/ItemService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +157,7 @@
       <option name="presentableId" value="Default" />
       <updated>1575849572518</updated>
       <workItem from="1584330986428" duration="1933000" />
-      <workItem from="1584427870008" duration="10302000" />
+      <workItem from="1584427870008" duration="12411000" />
     </task>
     <task id="LOCAL-00001" summary="#init">
       <created>1575860798282</created>
@@ -210,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584500540630</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="#mod: Updated item findOne() to return DetailItem so as to include joined data from category table and location table.">
+      <created>1584508224135</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1584508224135</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -241,29 +246,30 @@
     <MESSAGE value="#add: example codes" />
     <MESSAGE value="#add: added more INSERT statements for DB test data. #mod: Created new DB table 'location'" />
     <MESSAGE value="#add: implemented logic for find item by location id" />
-    <option name="LAST_COMMIT_MESSAGE" value="#add: implemented logic for find item by location id" />
+    <MESSAGE value="#mod: Updated item findOne() to return DetailItem so as to include joined data from category table and location table." />
+    <option name="LAST_COMMIT_MESSAGE" value="#mod: Updated item findOne() to return DetailItem so as to include joined data from category table and location table." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="537" y="115" width="836" height="806" key="CommitChangelistDialog2" timestamp="1584500540558">
+    <state x="537" y="115" width="836" height="806" key="CommitChangelistDialog2" timestamp="1584508224064">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="537" y="115" width="836" height="806" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584500540558" />
-    <state width="1874" height="185" key="GridCell.Tab.0.bottom" timestamp="1584508130672">
+    <state x="537" y="115" width="836" height="806" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584508224064" />
+    <state width="1874" height="185" key="GridCell.Tab.0.bottom" timestamp="1584510957787">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1874" height="185" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584508130672" />
-    <state width="1874" height="185" key="GridCell.Tab.0.center" timestamp="1584508130671">
+    <state width="1874" height="185" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584510957787" />
+    <state width="1874" height="185" key="GridCell.Tab.0.center" timestamp="1584510957786">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1874" height="185" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584508130671" />
-    <state width="1874" height="185" key="GridCell.Tab.0.left" timestamp="1584508130671">
+    <state width="1874" height="185" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584510957786" />
+    <state width="1874" height="185" key="GridCell.Tab.0.left" timestamp="1584510957786">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1874" height="185" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584508130671" />
-    <state width="1874" height="185" key="GridCell.Tab.0.right" timestamp="1584508130671">
+    <state width="1874" height="185" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584510957786" />
+    <state width="1874" height="185" key="GridCell.Tab.0.right" timestamp="1584510957787">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1874" height="185" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584508130671" />
+    <state width="1874" height="185" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584510957787" />
     <state width="1874" height="195" key="GridCell.Tab.1.bottom" timestamp="1584494989321">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -296,10 +302,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="464" y="154" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1584427856073" />
-    <state x="555" y="255" width="800" height="526" key="Vcs.Push.Dialog.v2" timestamp="1584505826560">
+    <state x="555" y="255" width="800" height="526" key="Vcs.Push.Dialog.v2" timestamp="1584508227257">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="555" y="255" width="800" height="526" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584505826560" />
+    <state x="555" y="255" width="800" height="526" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584508227257" />
     <state x="653" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1584427893461">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
