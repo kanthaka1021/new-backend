@@ -13,6 +13,7 @@ public class DetailItem {
     private String desc;
     private BigDecimal price;
     private String category;
+    private Integer cateogryId;
     private Integer locationId;
     private String locationName;
 
@@ -23,6 +24,7 @@ public class DetailItem {
                 desc,
                 custprice,
                 category,
+                cateogryId,
                 locationId,
                 locationName
         );

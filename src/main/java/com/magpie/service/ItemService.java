@@ -16,12 +16,14 @@ import java.util.stream.Collectors;
 @Slf4j
 @Component
 public class ItemService {
-    @Autowired ItemRepository repo;
+    @Autowired
+    ItemRepository repo;
 
     private String currentCurrency = "USD";
-    @Autowired private CurrencyService currencyService;
+    @Autowired
+    private CurrencyService currencyService;
 
-    public Mono<Items> findOne(Integer id) {
+    public Mono<List<DetailItem>> findOne(Integer id) {
         return repo.findOne(id);
     }
 
@@ -33,11 +35,11 @@ public class ItemService {
         // set current currency
         Mono<List<DetailItem>> list = repo.findList(seek, limit, fromPrice, toPrice);
         Integer minute = LocalTime.now().getMinute();
-        if(!unit.equals(currentCurrency)) {
+        if (!unit.equals(currentCurrency)) {
             try {
                 return list.map(l -> {
                     return l.stream().map(s -> {
-                        BigDecimal d = this.getCurrency(unit, s.getPrice(),minute);
+                        BigDecimal d = this.getCurrency(unit, s.getPrice(), minute);
                         return s.copy(d);
                     }).collect(Collectors.toList());
                 });
@@ -50,7 +52,11 @@ public class ItemService {
     }
 
     public Mono<List<DetailItem>> findList(Integer seek, Integer limit, Integer locationId) {
-       return repo.findList(seek, limit, locationId);
+        return repo.findList(seek, limit, locationId);
+    }
+
+    public Mono<Integer> save(DetailItem item) {
+        return repo.save(item);
     }
 
     public BigDecimal getCurrency(String unit, BigDecimal price, Integer minute) {

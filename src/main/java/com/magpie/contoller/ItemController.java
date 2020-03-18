@@ -30,7 +30,7 @@ public class ItemController extends MotherController {
 
     @ApiOperation(value = "Find item by id.", notes = "", response = TestDummy.class)
     @GetMapping("/item/{id}")
-    public Mono<ResponseEntity<Items>> findOne(@PathVariable("id") Integer id) {
+    public Mono<ResponseEntity<List<DetailItem>>> findOne(@PathVariable("id") Integer id) {
         return this.serivce.findOne(id)
                 .map(r -> new ResponseEntity<>(r, HttpStatus.OK))
                 .doOnError(e -> log.error(ExceptionUtils.getStackTrace(e)))
@@ -64,4 +64,15 @@ public class ItemController extends MotherController {
                 .onErrorReturn(new ResponseEntity<>(HttpStatus.SERVICE_UNAVAILABLE))
                 .defaultIfEmpty(new ResponseEntity<>(HttpStatus.NO_CONTENT));
     }
+
+    @ApiOperation(value = "Insert item", notes = "", response = TestDummy.class)
+    @PostMapping("/item")
+    public Mono<ResponseEntity<Integer>> insertItem(@RequestBody DetailItem item) {
+        return this.serivce.save(item)
+                .map(r -> new ResponseEntity<>(r, HttpStatus.OK))
+                .doOnError(e -> log.error(ExceptionUtils.getStackTrace(e)))
+                .onErrorReturn(new ResponseEntity<>(HttpStatus.SERVICE_UNAVAILABLE))
+                .defaultIfEmpty(new ResponseEntity<>(HttpStatus.NO_CONTENT));
+    }
+
 }
