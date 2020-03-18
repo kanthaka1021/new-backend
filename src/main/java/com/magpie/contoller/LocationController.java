@@ -10,6 +10,7 @@ import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,6 +27,7 @@ public class LocationController {
 
     @ApiOperation(value = "Find all locations", notes = "", response = TestDummy.class)
     @GetMapping("/locations")
+    @CrossOrigin(origins = "http://localhost:8100")
     public Mono<ResponseEntity<List<Location>>> getAll() {
         return this.service.getAll()
                 .map(r -> new ResponseEntity<>(r, HttpStatus.OK))
