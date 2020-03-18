@@ -49,6 +49,10 @@ public class ItemService {
         return list;
     }
 
+    public Mono<List<DetailItem>> findList(Integer seek, Integer limit, Integer locationId) {
+       return repo.findList(seek, limit, locationId);
+    }
+
     public BigDecimal getCurrency(String unit, BigDecimal price, Integer minute) {
         return this.currencyService.getInfo(minute).get(unit).multiply(price);
     }

@@ -42,7 +42,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Location extends TableImpl<LocationRecord> {
 
-    private static final long serialVersionUID = -393769759;
+    private static final long serialVersionUID = -1401258044;
 
     /**
      * The reference instance of <code>magpie.location</code>
@@ -63,9 +63,9 @@ public class Location extends TableImpl<LocationRecord> {
     public final TableField<LocationRecord, Integer> ID = createField(DSL.name("id"), org.jooq.impl.SQLDataType.INTEGER.nullable(false).identity(true), this, "");
 
     /**
-     * The column <code>magpie.location.city</code>.
+     * The column <code>magpie.location.name</code>.
      */
-    public final TableField<LocationRecord, String> CITY = createField(DSL.name("city"), org.jooq.impl.SQLDataType.VARCHAR(50).nullable(false), this, "");
+    public final TableField<LocationRecord, String> NAME = createField(DSL.name("name"), org.jooq.impl.SQLDataType.VARCHAR(1000), this, "");
 
     /**
      * Create a <code>magpie.location</code> table reference

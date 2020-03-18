@@ -5,19 +5,11 @@ package com.magpie.jooq;
 
 
 import com.magpie.jooq.tables.Category;
-import com.magpie.jooq.tables.CategoryLevel;
-import com.magpie.jooq.tables.Country;
 import com.magpie.jooq.tables.CurrencyInfo;
-import com.magpie.jooq.tables.ImageFile;
-import com.magpie.jooq.tables.Item;
 import com.magpie.jooq.tables.Items;
 import com.magpie.jooq.tables.Location;
-import com.magpie.jooq.tables.Message;
-import com.magpie.jooq.tables.Product;
-import com.magpie.jooq.tables.ProfileImageFile;
 import com.magpie.jooq.tables.TestDummy;
 import com.magpie.jooq.tables.User;
-import com.magpie.jooq.tables.Watch;
 
 import javax.annotation.Generated;
 
@@ -45,26 +37,12 @@ public class Indexes {
 
     public static final Index TEST_DUMMY_PRIMARY = Indexes0.TEST_DUMMY_PRIMARY;
     public static final Index CATEGORY_PRIMARY = Indexes0.CATEGORY_PRIMARY;
-    public static final Index CATEGORY_LEVEL_PRIMARY = Indexes0.CATEGORY_LEVEL_PRIMARY;
-    public static final Index COUNTRY_PRIMARY = Indexes0.COUNTRY_PRIMARY;
     public static final Index CURRENCY_INFO_PRIMARY = Indexes0.CURRENCY_INFO_PRIMARY;
-    public static final Index IMAGE_FILE_FK52UH28GE8VCTIU500MBWOCKPL = Indexes0.IMAGE_FILE_FK52UH28GE8VCTIU500MBWOCKPL;
-    public static final Index IMAGE_FILE_PRIMARY = Indexes0.IMAGE_FILE_PRIMARY;
-    public static final Index ITEM_FK2N9W8D0DP4BSFRA9DCG0046L4 = Indexes0.ITEM_FK2N9W8D0DP4BSFRA9DCG0046L4;
-    public static final Index ITEM_FK8GWMXR8C03VTEK0YQ8IW9J2MB = Indexes0.ITEM_FK8GWMXR8C03VTEK0YQ8IW9J2MB;
-    public static final Index ITEM_PRIMARY = Indexes0.ITEM_PRIMARY;
     public static final Index ITEMS_CATEGORY_ON_ITEM_FK_IDX = Indexes0.ITEMS_CATEGORY_ON_ITEM_FK_IDX;
+    public static final Index ITEMS_LOCATION_ON_ITEM_FK_IDX = Indexes0.ITEMS_LOCATION_ON_ITEM_FK_IDX;
     public static final Index ITEMS_PRIMARY = Indexes0.ITEMS_PRIMARY;
     public static final Index LOCATION_PRIMARY = Indexes0.LOCATION_PRIMARY;
-    public static final Index MESSAGE_FKB3Y6ETTI1CFOUGKDR0QIIEMGV = Indexes0.MESSAGE_FKB3Y6ETTI1CFOUGKDR0QIIEMGV;
-    public static final Index MESSAGE_FKLOUK16031JRN1KHR7JH3LAR39 = Indexes0.MESSAGE_FKLOUK16031JRN1KHR7JH3LAR39;
-    public static final Index MESSAGE_PRIMARY = Indexes0.MESSAGE_PRIMARY;
-    public static final Index PRODUCT_FK44KNFT22LEM6QRS5A2DD3WTFG = Indexes0.PRODUCT_FK44KNFT22LEM6QRS5A2DD3WTFG;
-    public static final Index PRODUCT_PRIMARY = Indexes0.PRODUCT_PRIMARY;
-    public static final Index PROFILE_IMAGE_FILE_PRIMARY = Indexes0.PROFILE_IMAGE_FILE_PRIMARY;
-    public static final Index USER_FKNEYHVOJ17HAX43M8DQ3U7GBIC = Indexes0.USER_FKNEYHVOJ17HAX43M8DQ3U7GBIC;
     public static final Index USER_PRIMARY = Indexes0.USER_PRIMARY;
-    public static final Index WATCH_PRIMARY = Indexes0.WATCH_PRIMARY;
 
     // -------------------------------------------------------------------------
     // [#1459] distribute members to avoid static initialisers > 64kb
@@ -73,25 +51,11 @@ public class Indexes {
     private static class Indexes0 {
         public static Index TEST_DUMMY_PRIMARY = Internal.createIndex("PRIMARY", TestDummy.TEST_DUMMY, new OrderField[] { TestDummy.TEST_DUMMY.ID }, true);
         public static Index CATEGORY_PRIMARY = Internal.createIndex("PRIMARY", Category.CATEGORY, new OrderField[] { Category.CATEGORY.ID }, true);
-        public static Index CATEGORY_LEVEL_PRIMARY = Internal.createIndex("PRIMARY", CategoryLevel.CATEGORY_LEVEL, new OrderField[] { CategoryLevel.CATEGORY_LEVEL.ID }, true);
-        public static Index COUNTRY_PRIMARY = Internal.createIndex("PRIMARY", Country.COUNTRY, new OrderField[] { Country.COUNTRY.ID }, true);
         public static Index CURRENCY_INFO_PRIMARY = Internal.createIndex("PRIMARY", CurrencyInfo.CURRENCY_INFO, new OrderField[] { CurrencyInfo.CURRENCY_INFO.ID }, true);
-        public static Index IMAGE_FILE_FK52UH28GE8VCTIU500MBWOCKPL = Internal.createIndex("FK52uh28ge8vctiu500mbwockpl", ImageFile.IMAGE_FILE, new OrderField[] { ImageFile.IMAGE_FILE.ITEM_ID }, false);
-        public static Index IMAGE_FILE_PRIMARY = Internal.createIndex("PRIMARY", ImageFile.IMAGE_FILE, new OrderField[] { ImageFile.IMAGE_FILE.ID }, true);
-        public static Index ITEM_FK2N9W8D0DP4BSFRA9DCG0046L4 = Internal.createIndex("FK2n9w8d0dp4bsfra9dcg0046l4", Item.ITEM, new OrderField[] { Item.ITEM.CATEGORY_ID }, false);
-        public static Index ITEM_FK8GWMXR8C03VTEK0YQ8IW9J2MB = Internal.createIndex("FK8gwmxr8c03vtek0yq8iw9j2mb", Item.ITEM, new OrderField[] { Item.ITEM.SELLER_ID }, false);
-        public static Index ITEM_PRIMARY = Internal.createIndex("PRIMARY", Item.ITEM, new OrderField[] { Item.ITEM.ID }, true);
         public static Index ITEMS_CATEGORY_ON_ITEM_FK_IDX = Internal.createIndex("category_on_item_fk_idx", Items.ITEMS, new OrderField[] { Items.ITEMS.CAT_ID }, false);
+        public static Index ITEMS_LOCATION_ON_ITEM_FK_IDX = Internal.createIndex("location_on_item_fk_idx", Items.ITEMS, new OrderField[] { Items.ITEMS.LOCATION_ID }, false);
         public static Index ITEMS_PRIMARY = Internal.createIndex("PRIMARY", Items.ITEMS, new OrderField[] { Items.ITEMS.ID }, true);
         public static Index LOCATION_PRIMARY = Internal.createIndex("PRIMARY", Location.LOCATION, new OrderField[] { Location.LOCATION.ID }, true);
-        public static Index MESSAGE_FKB3Y6ETTI1CFOUGKDR0QIIEMGV = Internal.createIndex("FKb3y6etti1cfougkdr0qiiemgv", Message.MESSAGE, new OrderField[] { Message.MESSAGE.USER_ID }, false);
-        public static Index MESSAGE_FKLOUK16031JRN1KHR7JH3LAR39 = Internal.createIndex("FKlouk16031jrn1khr7jh3lar39", Message.MESSAGE, new OrderField[] { Message.MESSAGE.ITEM_ID }, false);
-        public static Index MESSAGE_PRIMARY = Internal.createIndex("PRIMARY", Message.MESSAGE, new OrderField[] { Message.MESSAGE.ID }, true);
-        public static Index PRODUCT_FK44KNFT22LEM6QRS5A2DD3WTFG = Internal.createIndex("FK44knft22lem6qrs5a2dd3wtfg", Product.PRODUCT, new OrderField[] { Product.PRODUCT.SELLER_ID }, false);
-        public static Index PRODUCT_PRIMARY = Internal.createIndex("PRIMARY", Product.PRODUCT, new OrderField[] { Product.PRODUCT.ID }, true);
-        public static Index PROFILE_IMAGE_FILE_PRIMARY = Internal.createIndex("PRIMARY", ProfileImageFile.PROFILE_IMAGE_FILE, new OrderField[] { ProfileImageFile.PROFILE_IMAGE_FILE.ID }, true);
-        public static Index USER_FKNEYHVOJ17HAX43M8DQ3U7GBIC = Internal.createIndex("FKneyhvoj17hax43m8dq3u7gbic", User.USER, new OrderField[] { User.USER.LOCATION_ID }, false);
         public static Index USER_PRIMARY = Internal.createIndex("PRIMARY", User.USER, new OrderField[] { User.USER.ID }, true);
-        public static Index WATCH_PRIMARY = Internal.createIndex("PRIMARY", Watch.WATCH, new OrderField[] { Watch.WATCH.ID }, true);
     }
 }

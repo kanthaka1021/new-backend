@@ -20,7 +20,7 @@ import org.jooq.Identity;
 import org.jooq.Index;
 import org.jooq.Name;
 import org.jooq.Record;
-import org.jooq.Row4;
+import org.jooq.Row2;
 import org.jooq.Schema;
 import org.jooq.Table;
 import org.jooq.TableField;
@@ -42,7 +42,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Category extends TableImpl<CategoryRecord> {
 
-    private static final long serialVersionUID = 12909774;
+    private static final long serialVersionUID = -1696830437;
 
     /**
      * The reference instance of <code>magpie.category</code>
@@ -63,19 +63,9 @@ public class Category extends TableImpl<CategoryRecord> {
     public final TableField<CategoryRecord, Integer> ID = createField(DSL.name("id"), org.jooq.impl.SQLDataType.INTEGER.nullable(false).identity(true), this, "");
 
     /**
-     * The column <code>magpie.category.is_leaf</code>.
-     */
-    public final TableField<CategoryRecord, String> IS_LEAF = createField(DSL.name("is_leaf"), org.jooq.impl.SQLDataType.CHAR(1).nullable(false).defaultValue(org.jooq.impl.DSL.inline("N", org.jooq.impl.SQLDataType.CHAR)), this, "");
-
-    /**
      * The column <code>magpie.category.name</code>.
      */
-    public final TableField<CategoryRecord, String> NAME = createField(DSL.name("name"), org.jooq.impl.SQLDataType.VARCHAR(100).nullable(false), this, "");
-
-    /**
-     * The column <code>magpie.category.parent_id</code>.
-     */
-    public final TableField<CategoryRecord, Integer> PARENT_ID = createField(DSL.name("parent_id"), org.jooq.impl.SQLDataType.INTEGER, this, "");
+    public final TableField<CategoryRecord, String> NAME = createField(DSL.name("name"), org.jooq.impl.SQLDataType.VARCHAR(1000), this, "");
 
     /**
      * Create a <code>magpie.category</code> table reference
@@ -162,11 +152,11 @@ public class Category extends TableImpl<CategoryRecord> {
     }
 
     // -------------------------------------------------------------------------
-    // Row4 type methods
+    // Row2 type methods
     // -------------------------------------------------------------------------
 
     @Override
-    public Row4<Integer, String, String, Integer> fieldsRow() {
-        return (Row4) super.fieldsRow();
+    public Row2<Integer, String> fieldsRow() {
+        return (Row2) super.fieldsRow();
     }
 }

@@ -15,6 +15,7 @@ import java.util.List;
 
 import static com.magpie.jooq.tables.Items.ITEMS;
 import static com.magpie.jooq.tables.Category.CATEGORY;
+import static com.magpie.jooq.tables.Location.LOCATION;
 
 @Repository
 @Slf4j
@@ -37,11 +38,12 @@ public class ItemRepository
     // Find a list joining item and category
     public Mono<List<DetailItem>> findList(Integer seek, Integer limit, BigDecimal fromPrice, BigDecimal toPrice) {
         try {
-            Result<Record5<Integer, String, String, BigDecimal, String>> result
-                    = dsl.select(ITEMS.ID, ITEMS.NAME, ITEMS.DESC, ITEMS.PRICE, CATEGORY.NAME)
+            Result<Record6<Integer, String, String, BigDecimal, String, String>> result
+                    = dsl.select(ITEMS.ID, ITEMS.NAME, ITEMS.DESC, ITEMS.PRICE, CATEGORY.NAME, LOCATION.NAME)
                     .from(ITEMS).join(CATEGORY)
                     .on(CATEGORY.ID.eq(ITEMS.CAT_ID))
-                    .where(ITEMS.PRICE.gt(fromPrice).and(ITEMS.PRICE.lt(toPrice)))
+                    .join(LOCATION).onKey()
+                    .where(ITEMS.PRICE.greaterOrEqual(fromPrice).and(ITEMS.PRICE.lessOrEqual(toPrice)))
                     .orderBy(ITEMS.ID.asc())
                     .seek(seek)
                     .limit(limit)
@@ -59,6 +61,24 @@ public class ItemRepository
             return Mono.just(list);
         } catch (Exception e) {
             log.error(e.getMessage());
+            return Mono.error(e);
+        }
+    }
+
+    public Mono<List<DetailItem>> findList(Integer seek, Integer limit, Integer locationId) {
+        try {
+            Result<Record6<Integer, String, String, BigDecimal, String, String>> result
+                    = dsl.select(ITEMS.ID, ITEMS.NAME, ITEMS.DESC, ITEMS.PRICE, CATEGORY.NAME, LOCATION.NAME)
+                    .from(ITEMS)
+                    .join(CATEGORY).onKey()
+                    .join(LOCATION).onKey()
+                    .where(ITEMS.LOCATION_ID.eq(locationId))
+                    .orderBy(ITEMS.ID.asc())
+                    .seek(seek)
+                    .limit(limit)
+                    .fetch();
+            return Mono.just(result.into(DetailItem.class));
+        } catch (Exception e) {
             return Mono.error(e);
         }
     }

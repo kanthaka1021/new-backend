@@ -22,56 +22,32 @@ import javax.annotation.Generated;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class User implements Serializable {
 
-    private static final long serialVersionUID = -1481333064;
+    private static final long serialVersionUID = 1786404817;
 
     private Integer id;
+    private String  name;
     private String  account;
     private String  countryCode;
-    private String  name;
-    private Integer pasword;
-    private String  email;
-    private String  language;
-    private Integer password;
-    private Integer profileId;
-    private Integer locationId;
 
     public User() {}
 
     public User(User value) {
         this.id = value.id;
+        this.name = value.name;
         this.account = value.account;
         this.countryCode = value.countryCode;
-        this.name = value.name;
-        this.pasword = value.pasword;
-        this.email = value.email;
-        this.language = value.language;
-        this.password = value.password;
-        this.profileId = value.profileId;
-        this.locationId = value.locationId;
     }
 
     public User(
         Integer id,
-        String  account,
-        String  countryCode,
         String  name,
-        Integer pasword,
-        String  email,
-        String  language,
-        Integer password,
-        Integer profileId,
-        Integer locationId
+        String  account,
+        String  countryCode
     ) {
         this.id = id;
+        this.name = name;
         this.account = account;
         this.countryCode = countryCode;
-        this.name = name;
-        this.pasword = pasword;
-        this.email = email;
-        this.language = language;
-        this.password = password;
-        this.profileId = profileId;
-        this.locationId = locationId;
     }
 
     public Integer getId() {
@@ -80,6 +56,14 @@ public class User implements Serializable {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getAccount() {
@@ -98,76 +82,14 @@ public class User implements Serializable {
         this.countryCode = countryCode;
     }
 
-    public String getName() {
-        return this.name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Integer getPasword() {
-        return this.pasword;
-    }
-
-    public void setPasword(Integer pasword) {
-        this.pasword = pasword;
-    }
-
-    public String getEmail() {
-        return this.email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getLanguage() {
-        return this.language;
-    }
-
-    public void setLanguage(String language) {
-        this.language = language;
-    }
-
-    public Integer getPassword() {
-        return this.password;
-    }
-
-    public void setPassword(Integer password) {
-        this.password = password;
-    }
-
-    public Integer getProfileId() {
-        return this.profileId;
-    }
-
-    public void setProfileId(Integer profileId) {
-        this.profileId = profileId;
-    }
-
-    public Integer getLocationId() {
-        return this.locationId;
-    }
-
-    public void setLocationId(Integer locationId) {
-        this.locationId = locationId;
-    }
-
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("User (");
 
         sb.append(id);
+        sb.append(", ").append(name);
         sb.append(", ").append(account);
         sb.append(", ").append(countryCode);
-        sb.append(", ").append(name);
-        sb.append(", ").append(pasword);
-        sb.append(", ").append(email);
-        sb.append(", ").append(language);
-        sb.append(", ").append(password);
-        sb.append(", ").append(profileId);
-        sb.append(", ").append(locationId);
 
         sb.append(")");
         return sb.toString();

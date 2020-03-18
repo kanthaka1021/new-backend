@@ -13,6 +13,7 @@ public class DetailItem {
     private String desc;
     private BigDecimal price;
     private String category;
+    private Integer locationId;
 
     public DetailItem copy(BigDecimal custprice) {
         return new DetailItem(
@@ -20,7 +21,8 @@ public class DetailItem {
                 name,
                 desc,
                 custprice,
-                category
+                category,
+                locationId
         );
     }
 }

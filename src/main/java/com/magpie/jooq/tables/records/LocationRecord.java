@@ -28,7 +28,7 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class LocationRecord extends UpdatableRecordImpl<LocationRecord> implements Record2<Integer, String> {
 
-    private static final long serialVersionUID = 669207540;
+    private static final long serialVersionUID = 296163764;
 
     /**
      * Setter for <code>magpie.location.id</code>.
@@ -45,16 +45,16 @@ public class LocationRecord extends UpdatableRecordImpl<LocationRecord> implemen
     }
 
     /**
-     * Setter for <code>magpie.location.city</code>.
+     * Setter for <code>magpie.location.name</code>.
      */
-    public void setCity(String value) {
+    public void setName(String value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>magpie.location.city</code>.
+     * Getter for <code>magpie.location.name</code>.
      */
-    public String getCity() {
+    public String getName() {
         return (String) get(1);
     }
 
@@ -88,7 +88,7 @@ public class LocationRecord extends UpdatableRecordImpl<LocationRecord> implemen
 
     @Override
     public Field<String> field2() {
-        return Location.LOCATION.CITY;
+        return Location.LOCATION.NAME;
     }
 
     @Override
@@ -98,7 +98,7 @@ public class LocationRecord extends UpdatableRecordImpl<LocationRecord> implemen
 
     @Override
     public String component2() {
-        return getCity();
+        return getName();
     }
 
     @Override
@@ -108,7 +108,7 @@ public class LocationRecord extends UpdatableRecordImpl<LocationRecord> implemen
 
     @Override
     public String value2() {
-        return getCity();
+        return getName();
     }
 
     @Override
@@ -119,7 +119,7 @@ public class LocationRecord extends UpdatableRecordImpl<LocationRecord> implemen
 
     @Override
     public LocationRecord value2(String value) {
-        setCity(value);
+        setName(value);
         return this;
     }
 
@@ -144,10 +144,10 @@ public class LocationRecord extends UpdatableRecordImpl<LocationRecord> implemen
     /**
      * Create a detached, initialised LocationRecord
      */
-    public LocationRecord(Integer id, String city) {
+    public LocationRecord(Integer id, String name) {
         super(Location.LOCATION);
 
         set(0, id);
-        set(1, city);
+        set(1, name);
     }
 }
