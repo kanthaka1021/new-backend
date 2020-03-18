@@ -3,40 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="757e5696-1871-4936-a227-d1c85956264a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/contoller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/contoller/ItemController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/domain/DetailItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/domain/DetailItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/Indexes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/Indexes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/Keys.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/Keys.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/Magpie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/Magpie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/Tables.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/Tables.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/CategoryLevel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/ImageFile.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/Item.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/Message.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/ProfileImageFile.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/Watch.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/pojos/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/pojos/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/records/CategoryLevelRecord.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/records/CategoryRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/records/CategoryRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/records/ImageFileRecord.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/records/ItemRecord.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/records/LocationRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/records/LocationRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/records/MessageRecord.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/records/ProfileImageFileRecord.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/records/UserRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/records/UserRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/jooq/tables/records/WatchRecord.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/repository/ItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/repository/ItemRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/service/ItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/service/ItemService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/magpie/jooq/Indexes$Indexes0.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/magpie/jooq/Indexes$Indexes0.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/magpie/jooq/Indexes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/magpie/jooq/Indexes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/magpie/jooq/Keys$UniqueKeys0.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/magpie/jooq/Keys$UniqueKeys0.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/magpie/jooq/Keys.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/magpie/jooq/Keys.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/magpie/jooq/Magpie.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/magpie/jooq/Magpie.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/magpie/jooq/Tables.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/magpie/jooq/Tables.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/table_script.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/table_script.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +156,7 @@
       <option name="presentableId" value="Default" />
       <updated>1575849572518</updated>
       <workItem from="1584330986428" duration="1933000" />
-      <workItem from="1584427870008" duration="5470000" />
+      <workItem from="1584427870008" duration="6954000" />
     </task>
     <task id="LOCAL-00001" summary="#init">
       <created>1575860798282</created>
@@ -225,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584494736565</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="#add: implemented logic for find item by location id">
+      <created>1584496497624</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1584496497624</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -255,29 +230,30 @@
     <MESSAGE value="#add: generic and functional programing" />
     <MESSAGE value="#add: example codes" />
     <MESSAGE value="#add: added more INSERT statements for DB test data. #mod: Created new DB table 'location'" />
-    <option name="LAST_COMMIT_MESSAGE" value="#add: added more INSERT statements for DB test data. #mod: Created new DB table 'location'" />
+    <MESSAGE value="#add: implemented logic for find item by location id" />
+    <option name="LAST_COMMIT_MESSAGE" value="#add: implemented logic for find item by location id" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="537" y="115" width="836" height="806" key="CommitChangelistDialog2" timestamp="1584494736102">
+    <state x="537" y="115" width="836" height="806" key="CommitChangelistDialog2" timestamp="1584496497532">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="537" y="115" width="836" height="806" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584494736102" />
-    <state width="1874" height="185" key="GridCell.Tab.0.bottom" timestamp="1584496250067">
+    <state x="537" y="115" width="836" height="806" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584496497532" />
+    <state width="1874" height="185" key="GridCell.Tab.0.bottom" timestamp="1584500508197">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1874" height="185" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584496250067" />
-    <state width="1874" height="185" key="GridCell.Tab.0.center" timestamp="1584496250065">
+    <state width="1874" height="185" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584500508197" />
+    <state width="1874" height="185" key="GridCell.Tab.0.center" timestamp="1584500508196">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1874" height="185" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584496250065" />
-    <state width="1874" height="185" key="GridCell.Tab.0.left" timestamp="1584496250065">
+    <state width="1874" height="185" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584500508196" />
+    <state width="1874" height="185" key="GridCell.Tab.0.left" timestamp="1584500508196">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1874" height="185" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584496250065" />
-    <state width="1874" height="185" key="GridCell.Tab.0.right" timestamp="1584496250066">
+    <state width="1874" height="185" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584500508196" />
+    <state width="1874" height="185" key="GridCell.Tab.0.right" timestamp="1584500508196">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1874" height="185" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584496250066" />
+    <state width="1874" height="185" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584500508196" />
     <state width="1874" height="195" key="GridCell.Tab.1.bottom" timestamp="1584494989321">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

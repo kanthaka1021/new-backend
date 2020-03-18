@@ -38,8 +38,8 @@ public class ItemRepository
     // Find a list joining item and category
     public Mono<List<DetailItem>> findList(Integer seek, Integer limit, BigDecimal fromPrice, BigDecimal toPrice) {
         try {
-            Result<Record6<Integer, String, String, BigDecimal, String, String>> result
-                    = dsl.select(ITEMS.ID, ITEMS.NAME, ITEMS.DESC, ITEMS.PRICE, CATEGORY.NAME, LOCATION.NAME)
+            Result<Record7<Integer, String, String, BigDecimal, String, Integer, String>> result
+                    = dsl.select(ITEMS.ID, ITEMS.NAME, ITEMS.DESC, ITEMS.PRICE, CATEGORY.NAME, LOCATION.ID, LOCATION.NAME)
                     .from(ITEMS).join(CATEGORY)
                     .on(CATEGORY.ID.eq(ITEMS.CAT_ID))
                     .join(LOCATION).onKey()
@@ -67,8 +67,8 @@ public class ItemRepository
 
     public Mono<List<DetailItem>> findList(Integer seek, Integer limit, Integer locationId) {
         try {
-            Result<Record6<Integer, String, String, BigDecimal, String, String>> result
-                    = dsl.select(ITEMS.ID, ITEMS.NAME, ITEMS.DESC, ITEMS.PRICE, CATEGORY.NAME, LOCATION.NAME)
+            Result<Record7<Integer, String, String, BigDecimal, String, Integer, String>> result
+                    = dsl.select(ITEMS.ID, ITEMS.NAME, ITEMS.DESC, ITEMS.PRICE, CATEGORY.NAME, LOCATION.ID, LOCATION.NAME)
                     .from(ITEMS)
                     .join(CATEGORY).onKey()
                     .join(LOCATION).onKey()
