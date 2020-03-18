@@ -2,10 +2,9 @@
 package com.magpie.contoller;
 
 
-import com.magpie.domain.CombinedInfo;
+
 import com.magpie.jooq.tables.pojos.TestDummy;
 import com.magpie.jooq.tables.pojos.User;
-import com.magpie.service.TestService;
 import com.magpie.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

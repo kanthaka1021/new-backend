@@ -9,6 +9,7 @@ import com.magpie.jooq.Keys;
 import com.magpie.jooq.Magpie;
 import com.magpie.jooq.tables.records.ItemRecord;
 
+import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
 
@@ -42,7 +43,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Item extends TableImpl<ItemRecord> {
 
-    private static final long serialVersionUID = 415254454;
+    private static final long serialVersionUID = 296299194;
 
     /**
      * The reference instance of <code>magpie.item</code>
@@ -85,7 +86,7 @@ public class Item extends TableImpl<ItemRecord> {
     /**
      * The column <code>magpie.item.price</code>.
      */
-    public final TableField<ItemRecord, Integer> PRICE = createField(DSL.name("price"), org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
+    public final TableField<ItemRecord, BigDecimal> PRICE = createField(DSL.name("price"), org.jooq.impl.SQLDataType.DECIMAL(10, 2).nullable(false), this, "");
 
     /**
      * The column <code>magpie.item.status</code>.
@@ -209,7 +210,7 @@ public class Item extends TableImpl<ItemRecord> {
     // -------------------------------------------------------------------------
 
     @Override
-    public Row10<Integer, String, String, Integer, String, Integer, String, String, Integer, Integer> fieldsRow() {
+    public Row10<Integer, String, String, Integer, String, BigDecimal, String, String, Integer, Integer> fieldsRow() {
         return (Row10) super.fieldsRow();
     }
 }

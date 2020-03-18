@@ -28,7 +28,7 @@ public class ItemController extends MotherController {
     @Autowired
     private ItemService serivce;
 
-    @ApiOperation(value = "Find a dummy record.", notes = "", response = TestDummy.class)
+    @ApiOperation(value = "Find items by id.", notes = "", response = TestDummy.class)
     @GetMapping("/item/{id}")
     public Mono<ResponseEntity<Items>> findOne(@PathVariable("id") Integer id) {
         return this.serivce.findOne(id)
