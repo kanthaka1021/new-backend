@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="757e5696-1871-4936-a227-d1c85956264a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/new-backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/magpie-backend.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/contoller/LocationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magpie/contoller/LocationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/contoller/WeatherApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/domain/CombinedInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/magpie/domain/WeatherInfo.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +89,7 @@
   <component name="RunManager" selected="Application.Application">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.magpie.Application" />
-      <module name="new-backend" />
+      <module name="magpie-backend" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.magpie.*" />
@@ -97,7 +101,7 @@
       </method>
     </configuration>
     <configuration name="All in new-backend" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="new-backend" />
+      <module name="magpie-backend" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
@@ -130,7 +134,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="new-backend" />
+      <module name="magpie-backend" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.magpie.Application" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -156,6 +160,8 @@
       <updated>1575849572518</updated>
       <workItem from="1584330986428" duration="1933000" />
       <workItem from="1584427870008" duration="13095000" />
+      <workItem from="1585888257020" duration="417000" />
+      <workItem from="1587009455423" duration="724000" />
     </task>
     <task id="LOCAL-00001" summary="#init">
       <created>1575860798282</created>
@@ -256,26 +262,26 @@
     <option name="LAST_COMMIT_MESSAGE" value="#add: added LocationController, LocationRepository, LocationService" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="537" y="115" width="836" height="806" key="CommitChangelistDialog2" timestamp="1584511032072">
+    <state x="537" y="115" width="836" height="806" key="CommitChangelistDialog2" timestamp="1584512451957">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="537" y="115" width="836" height="806" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584511032072" />
-    <state width="1874" height="185" key="GridCell.Tab.0.bottom" timestamp="1584512354904">
+    <state x="537" y="115" width="836" height="806" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584512451957" />
+    <state width="1874" height="195" key="GridCell.Tab.0.bottom" timestamp="1587010337700">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1874" height="185" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584512354904" />
-    <state width="1874" height="185" key="GridCell.Tab.0.center" timestamp="1584512354903">
+    <state width="1874" height="195" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587010337700" />
+    <state width="1874" height="195" key="GridCell.Tab.0.center" timestamp="1587010337699">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1874" height="185" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584512354903" />
-    <state width="1874" height="185" key="GridCell.Tab.0.left" timestamp="1584512354903">
+    <state width="1874" height="195" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587010337699" />
+    <state width="1874" height="195" key="GridCell.Tab.0.left" timestamp="1587010337699">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1874" height="185" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584512354903" />
-    <state width="1874" height="185" key="GridCell.Tab.0.right" timestamp="1584512354904">
+    <state width="1874" height="195" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587010337699" />
+    <state width="1874" height="195" key="GridCell.Tab.0.right" timestamp="1587010337700">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1874" height="185" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584512354904" />
+    <state width="1874" height="195" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587010337700" />
     <state width="1874" height="195" key="GridCell.Tab.1.bottom" timestamp="1584494989321">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -308,14 +314,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="464" y="154" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1584427856073" />
-    <state x="555" y="255" width="800" height="526" key="Vcs.Push.Dialog.v2" timestamp="1584511033537">
+    <state x="555" y="255" width="800" height="526" key="Vcs.Push.Dialog.v2" timestamp="1584512453478">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="555" y="255" width="800" height="526" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584511033537" />
-    <state x="653" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1584427893461">
+    <state x="555" y="255" width="800" height="526" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584512453478" />
+    <state x="653" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1587009467949">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="653" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584427893461" />
+    <state x="653" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587009467949" />
     <state x="765" y="439" width="380" height="158" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584428690878">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

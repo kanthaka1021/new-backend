@@ -1,10 +1,8 @@
 package com.magpie.contoller;
 
 
-import com.magpie.domain.WeatherInfo;
 import com.magpie.jooq.tables.pojos.TestDummy;
 import com.magpie.service.CurrencyService;
-import com.magpie.service.TestService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
